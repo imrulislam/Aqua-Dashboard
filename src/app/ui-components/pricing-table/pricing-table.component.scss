@@ -1,0 +1,148 @@
+
+// Pricing Table component scss
+.pricing-table-wrapper {}
+
+.single-pricing-table {
+  margin: 16px;
+  transition: all 0.4s;
+  -webkit-transition: all 0.4s;
+  -ms-transition: all 0.4s;
+  background: #fff;
+  &:hover {
+    box-shadow: 0 10px 16px rgba(0, 0, 0, 0.2) !important;
+  }
+}
+
+.teal-footer {
+  button {
+    background: #009688 !important;
+  }
+}
+
+.lime-footer {
+  button {
+    background: #CDDC39 !important;
+  }
+}
+
+.green-footer {
+  button {
+    background: #4CAF50 !important;
+  }
+}
+
+.p-icon {
+  mat-icon {
+    width: 48px !important;
+    height: 48px !important;
+    line-height: 48px !important;
+  }
+}
+
+.pt-design-two {
+  .pt-footer {
+    button {
+      background: none;
+      border: none;
+      border: 1px solid #dcdcdc;
+      border-radius: 2px;
+      padding: 10px 25px;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.pt-design-three {
+  .pricing-header {
+    .p-icon {
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      position: relative;
+      color: #fff;
+      text-align: center;
+      z-index: 2;
+      margin: 0 auto;
+      &::before {
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        content: '';
+        border-radius: 50%;
+        top: 50%;
+        left: 50%;
+        z-index: 1;
+        margin-left: -50px;
+        margin-top: -50px;
+      }
+      &::after {
+        position: absolute;
+        width: 140px;
+        height: 140px;
+        content: '';
+        border-radius: 50%;
+        top: 0;
+        left: 0;
+        z-index: 0;
+      }
+      mat-icon {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        z-index: 3;
+        margin-top: -24px;
+        margin-left: -24px;
+        line-height: 53px !important;
+      }
+    }
+    .p-c-one {
+      &::before {
+        background: #26C6DA;
+      }
+      &::after {
+        background: #00ACC1;
+      }
+    }
+    .p-c-two {
+      &::before {
+        background: #26A69A;
+      }
+      &::after {
+        background: #00897B;
+      }
+    }
+    .p-c-three {
+      &::before {
+        background: #FFCA28;
+      }
+      &::after {
+        background: #FFB300;
+      }
+    }
+    .p-c-four {
+      &::before {
+        background: #66BB6A;
+      }
+      &::after {
+        background: #43A047;
+      }
+    }
+  }
+  .pricing-body {
+    ul {
+      padding: 0;
+      margin: 0;
+      li {
+        list-style: none;
+        padding-bottom: 16px;
+        &:last-child {
+          padding-bottom: 0;
+        }
+      }
+    }
+  }
+}
+
+// Pricing Table component scss

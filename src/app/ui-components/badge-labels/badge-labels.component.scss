@@ -1,0 +1,126 @@
+// Badge component scss
+.badge-list {
+    ul {
+      padding: 0;
+      margin: 0;
+      li {
+        display: inline-block;
+        margin-right: 24px;
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+  
+  .badge {
+    color: #fff;
+    font-size: 12px;
+    text-align: center;
+    min-width: 10px;
+    white-space: nowrap;
+    vertical-align: middle;
+    font-weight: bold;
+    padding: 3px 7px;
+    border-radius: 10px;
+    background: #757575;
+  }
+  
+  .badge.white-bg {
+    border: 1px solid #dedede;
+  }
+  
+  .badge-icon {
+    position: relative;
+    span.badge {
+      position: absolute;
+      top: -4px;
+      left: 24px;
+    }
+  }
+  
+  .badge.badge-xs {
+    font-size: 10px;
+    padding: 3px 6px;
+  }
+  
+  .badge.badge-sm {
+    font-size: 11px;
+    padding: 3px 6px;
+  }
+  
+  .badge.badge-md {
+    font-size: 12px;
+    padding: 3px 7px;
+  }
+  
+  .badge.badge-lg {
+    font-size: 14px;
+    padding: 3px 7px;
+  }
+  
+  .badge-icon-sm {
+    button {
+      line-height: 30px;
+      width: 30px;
+      height: 30px;
+      mat-icon {
+        font-size: 18px
+      }
+    }
+    span.badge {
+      padding: 3px 5px;
+      top: -2px;
+      font-size: 10px;
+      left: 20px;
+    }
+  }
+  
+  .badge-icon-large {
+    button {
+      line-height: 50px;
+      width: 50px;
+      height: 50px;
+      mat-icon {
+        font-size: 30px;
+        width: 50px;
+        height: 50px;
+        line-height: 50px;
+      }
+    }
+    span.badge {
+      padding: 3px 7px;
+      top: -5px;
+      font-size: 12px;
+      left: 30px;
+    }
+  }
+  
+  .badge-u-menu {
+    min-height: 64px;
+    display: flex;
+    background: #f5f5f5;
+    align-items: center;
+  }
+  
+  // Badge component scss
+  // Label component scss
+  .label {
+    color: #fff;
+    font-size: 12px;
+    text-align: center;
+    min-width: 10px;
+    white-space: nowrap;
+    vertical-align: middle;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 5px;
+    background: #757575;
+  }
+  
+  .border-radius-0 {
+    border-radius: 0 !important;
+  }
+  
+  // Label component scss
+  

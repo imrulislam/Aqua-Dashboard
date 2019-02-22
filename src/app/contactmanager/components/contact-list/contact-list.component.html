@@ -1,0 +1,31 @@
+<div [class] = "theme">
+  <h1 class="heading">Contact List</h1>
+
+  <div fxLayout.gt-sm="row wrap" fxLayout.sm="row wrap" fxLayout="column" class="mb-32">
+    <div fxLayout="column" fxFlex="100%" fxFlex.sm="50%" fxFlex.gt-sm="25%">
+      <mat-card>Simple card 1</mat-card>
+    </div>
+    <div fxLayout="column" fxFlex="100%" fxFlex.sm="50%" fxFlex.gt-sm="25%">
+      <mat-card>Simple card 2</mat-card>
+    </div>
+    <div fxLayout="column" fxFlex="100%" fxFlex.sm="50%" fxFlex.gt-sm="25%">
+      <mat-card>Simple card 3</mat-card>
+    </div>
+    <div fxLayout="column" fxFlex="100%" fxFlex.sm="50%" fxFlex.gt-sm="25%">
+      <mat-card>Simple card 4</mat-card>
+    </div>
+  </div>
+
+  <div>
+    <button mat-raised-button color="primary">Primary</button>
+    <button mat-raised-button color="accent">Accent</button>
+    <button mat-raised-button color="warn">Warn</button>
+
+    <mat-form-field>
+      <mat-select placeholder="Theme" [(ngModel)]="theme">
+        <mat-option value="my-theme">My Theme</mat-option>
+        <mat-option value="my-second-theme">Second Theme</mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+</div>

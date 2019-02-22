@@ -1,0 +1,108 @@
+<mat-sidenav-container class="app-sidenav-container">
+  <mat-sidenav #sidenav class="app-sidenav mat-elevation-z2" [opened]="!isScreenSmall()" [mode]="isScreenSmall() ? 'over' : 'side'">
+    <mat-toolbar color="primary" class="mat-elevation-z2 z-index-">
+      <div class="logo">
+        <!-- <img src="" alt=""> -->
+        <p class="m-0 p-0 font-size-20 font-weight-700 white-text italic">Stack</p>
+      </div>
+    </mat-toolbar>
+    <div class="user-profile p-16 pb-24 mt-5 mat-elevation-z2 mb-5">
+      <div class="user-image mb-8">
+        <img class="avatar" src="assets/images/user-img.png" alt="">
+      </div>
+      <div class="user-description">
+        <h4 class="m-0 p-0 font-size-16 mb-4 white-text">John Deo</h4>
+        <p class="m-0 p-0 font-size-14 white-text">john.deo@gmail.com</p>
+      </div>
+    </div>
+    <a class="nav-link">
+      <mat-icon class="nav-link-icon">dashboard</mat-icon>
+      Dashboard
+    </a> 
+    <a class="nav-link" [routerLink]="['/contactlist']" routerLinkActive="active">
+      <mat-icon class="nav-link-icon">list</mat-icon>
+      Contact List
+    </a> 
+    
+    <!-- <div fxLayout="row" class="nav-link" [routerLink]="['/table']" routerLinkActive="active">
+      <div>
+        <mat-icon class="nav-link-icon">table_chart</mat-icon>
+      </div>
+      <p class="p-0 m-0 font-size-16">Tables</p>
+    </div>
+    <div class="sub-menu-item" [ngClass]="{'expanded':menuActive}">
+      <div class="nav-link" fxLayout="row" fxLayoutAlign="space-between center" (click)="menuCallapse()">
+        <div fxLayout="row">
+          <div>
+            <mat-icon class="nav-link-icon">store</mat-icon>
+          </div>
+          <p class="p-0 m-0 font-size-16">Ui-components</p>
+        </div>
+        <div>
+          <mat-icon class="routeIcon collapse-arrow">keyboard_arrow_up</mat-icon>
+        </div>
+      </div>
+      <div class="children">
+        <a class="nav-link" [routerLink]="['/ui-component/pricing-table']" routerLinkActive="active">
+          Pricing Table
+        </a>
+        <a class="nav-link" [routerLink]="['/ui-component/card']" routerLinkActive="active">
+          Card
+        </a>
+        <a class="nav-link" [routerLink]="['/ui-component/button']" routerLinkActive="active">
+          Buttons
+        </a>
+        <a class="nav-link" [routerLink]="['/ui-component/hover']" routerLinkActive="active">
+          Hover
+        </a>
+        <a class="nav-link" [routerLink]="['/ui-component/expansion-panel']" routerLinkActive="active">
+          Expantion Panels
+        </a>
+        <a class="nav-link" [routerLink]="['/ui-component/tab']" routerLinkActive="active">
+          Tabs
+        </a>
+        <a class="nav-link" [routerLink]="['/ui-component/badges']" routerLinkActive="active">
+          Badges and Labels
+        </a>
+        <a class="nav-link" [routerLink]="['/ui-component/call-action']" routerLinkActive="active">
+          Call to Actions
+        </a>
+        <a class="nav-link" [routerLink]="['/ui-component/cover']" routerLinkActive="active">
+          Covers
+        </a>
+        <a class="nav-link" [routerLink]="['/ui-component/popover']" routerLinkActive="active">
+          Popovers
+        </a>
+        <a class="nav-link" [routerLink]="['/ui-component/ribbons']" routerLinkActive="active">
+          Ribbons
+        </a>
+      </div>
+    </div>
+    <div class="sub-menu-item" [ngClass]="{'expanded':menuActive}">
+      <div class="nav-link" fxLayout="row" fxLayoutAlign="space-between center" (click)="menuCallapse()">
+        <div fxLayout="row">
+          <div>
+            <mat-icon class="nav-link-icon">store</mat-icon>
+          </div>
+          <p class="p-0 m-0 font-size-16">Charts</p>
+        </div>
+        <div>
+          <mat-icon class="routeIcon collapse-arrow">keyboard_arrow_up</mat-icon>
+        </div>
+      </div>
+      <div class="children">
+        <a class="nav-link" [routerLink]="['/chart/bar-chart']" routerLinkActive="active">
+          Bar Chart
+        </a>
+      </div>
+    </div> -->
+
+  </mat-sidenav>
+
+  <div class="app-sidenav-content">
+    <app-toolbar (toggleSideNav)="sidenav.toggle()" class="mat-elevation-z4"></app-toolbar>
+    <div class="wrapper p-16">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</mat-sidenav-container>

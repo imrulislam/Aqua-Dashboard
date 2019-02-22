@@ -1,0 +1,167 @@
+<div class="mb-32">
+        <div class="badge-wrapper mb-32">
+          <mat-card fxLayout.gt-sm="row" fxLayout="column" fxLayoutGap="24px">
+            <div fxFlex="50">
+              <p class="p-0 m-0 font-size-16 mb-32 secondary-text">Badges</p>
+      
+              <p class="p-0 m-0 font-size-14 mb-16 secondary-text">Badge with icon</p>
+              <div class="badge-list mb-40">
+                <ul>
+                  <li>
+                    <div class="badge-icon badge-icon-sm">
+                      <button mat-icon-button color="primary">
+                        <mat-icon aria-label="Share">notifications</mat-icon>
+                      </button>
+                      <span class="primary-bg badge">2</span>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="badge-icon">
+                      <button mat-icon-button color="primary">
+                        <mat-icon aria-label="Share">notifications_none</mat-icon>
+                      </button>
+                      <span class="primary-bg badge">20</span>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="badge-icon badge-icon-large">
+                      <button mat-icon-button color="primary">
+                        <mat-icon aria-label="Share">notifications</mat-icon>
+                      </button>
+                      <span class="primary-bg badge">200</span>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+      
+              <p class="p-0 m-0 font-size-14 mb-16 secondary-text">Badge with multiple colors</p>
+              <p class="p-0 m-0 mb-40">
+                <span class="badge dark-bg">35</span>
+                <span class="badge primary-bg">3</span>
+                <span class="badge success-bg">3</span>
+                <span class="badge warning-bg">300</span>
+                <span class="badge danger-bg">3</span>
+                <span class="badge info-bg">3</span>
+                <span class="badge">3</span>
+                <span class="badge white-bg secondary-text">3</span>
+              </p>
+      
+              <p class="p-0 m-0 font-size-14 mb-16 secondary-text">Different Size </p>
+              <p class="p-0 m-0 mb-32">
+                <span class="badge primary-bg badge-xs">3</span>
+                <span class="badge success-bg badge-sm">31</span>
+                <span class="badge warning-bg badge-md">50</span>
+                <span class="badge danger-bg badge-lg">300</span>
+              </p>
+            </div>
+            <div fxFlex="50">
+              <p class="m-0 p-0 font-size-16 mb-16 secondary-text">Badge Usages</p>
+              <div class="badge-menu-use">
+                <div class="badge-u-menu mb-32">
+                  <span class="ml-16 mr-16">Notification</span>
+                  <div class="badge-icon">
+                    <button mat-icon-button color="primary">
+                      <mat-icon aria-label="Share">notifications_none</mat-icon>
+                    </button>
+                    <span class="primary-bg badge">20</span>
+                  </div>
+                </div>
+                <div class="mb-32">
+                  <button mat-button>Basic
+                    <span class="ml-4 badge dark-bg">35</span>
+                  </button>
+                  <button mat-raised-button color="primary">Primary
+                    <span class="ml-4 badge white-bg secondary-text">3</span>
+                  </button>
+                  <button mat-raised-button color="warn">Warn
+                    <span class="ml-4 badge primary-bg">3</span>
+                  </button>
+                </div>
+                <div class="mb-32">
+                  <mat-tab-group>
+                    <mat-tab>
+                      <ng-template mat-tab-label>
+                        Tab 1
+                        <span class="ml-4 badge primary-bg">3</span>
+                      </ng-template>
+                      Content 1
+                    </mat-tab>
+                    <mat-tab>
+                      <ng-template mat-tab-label>
+                        Tab 2
+                        <span class="ml-4 badge dark-bg">3</span>
+                      </ng-template>
+                      Content 2
+                    </mat-tab>
+                    <mat-tab>
+                      <ng-template mat-tab-label>
+                        Tab 3
+                        <span class="ml-4 badge danger-bg">3</span>
+                      </ng-template>
+                      Content 3
+                    </mat-tab>
+                  </mat-tab-group>
+                </div>
+              </div>
+            </div>
+          </mat-card>
+      
+        </div>
+      
+        <div class="label-wrapper mb-32">
+          <mat-card fxLayout.gt-sm="row" fxLayout="column" fxLayoutGap="24px">
+            <div fxFlex="50">
+              <p class="p-0 m-0 font-size-16 mb-32 secondary-text">Labels</p>
+      
+              <div class="mb-32">
+                <p class="p-0 m-0 font-size-14 mb-16 secondary-text">Labels with text</p>
+                <span class="label">Hello</span>
+                <span class="label primary-bg">World</span>
+                <span class="label success-bg">Success</span>
+                <span class="label dark-bg">Oh!</span>
+                <span class="label danger-bg">Yes</span>
+              </div>
+      
+              <div class="mb-32">
+                <p class="p-0 m-0 font-size-14 mb-16 secondary-text">Labels with multiple colors</p>
+                <span class="label text-uppercase">A</span>
+                <span class="label primary-bg text-uppercase">B</span>
+                <span class="label success-bg text-uppercase">C</span>
+                <span class="label dark-bg text-uppercase">D</span>
+                <span class="label danger-bg text-uppercase">E</span>
+                <span class="label bg-teal-500 text-uppercase">F</span>
+                <span class="label bg-yellow-500 text-uppercase">G</span>
+                <span class="label bg-amber-500 text-uppercase">H</span>
+                <span class="label bg-gray-500 text-uppercase">I</span>
+                <span class="label bg-lime-500 text-uppercase">J</span>
+              </div>
+      
+              <div class="mb-32">
+                <p class="p-0 m-0 font-size-14 mb-16 secondary-text">Labels without border radius</p>
+                <span class="label border-radius-0 text-uppercase">A</span>
+                <span class="label border-radius-0 primary-bg text-uppercase">B</span>
+                <span class="label border-radius-0 success-bg text-uppercase">C</span>
+                <span class="label border-radius-0 dark-bg text-uppercase">D</span>
+                <span class="label border-radius-0 danger-bg text-uppercase">E</span>
+                <span class="label border-radius-0 bg-teal-500 text-uppercase">F</span>
+                <span class="label border-radius-0 bg-yellow-500 text-uppercase">G</span>
+                <span class="label border-radius-0 bg-amber-500 text-uppercase">H</span>
+                <span class="label border-radius-0 bg-gray-500 text-uppercase">I</span>
+                <span class="label border-radius-0 bg-lime-500 text-uppercase">J</span>
+              </div>
+            </div>
+      
+            <div fxFlex="50">
+              <p class="p-0 m-0 font-size-16 mb-32 secondary-text">Label Usages</p>
+      
+              <div class="label-tag">
+                <span class="label success-bg">Angular</span>
+                <span class="label primary-bg">React</span>
+                <span class="label warn-bg">Python</span>
+                <span class="label dark-bg">Java</span>
+                <span class="label info-bg">C++</span>
+              </div>
+            </div>
+          </mat-card>
+        </div>
+      </div>
