@@ -1,0 +1,253 @@
+:host {
+    .income-legend {
+        ul {
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: row;
+        }
+
+        li {
+            list-style: none;
+            margin-right: 16px;
+
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+
+    .visitor-chart-wrapper {
+        height: 250px;
+    }
+
+    .top-date-range {
+        position: absolute;
+        right: 0;
+        top: -22px;
+    }
+
+    .donought-chart-wrapper {
+        height: 112px;
+    }
+
+    .line-chart-wrapper {
+        height: 347px;
+    }
+
+    .bar-chart-wrapper {
+        height: 310px;
+    }
+
+    .feed {
+        padding: 12px 16px;
+
+        &:hover {
+            background-color: #f5f5f5;
+        }
+
+        .feed-icon {
+            height: 40px;
+            width: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #f5f5f5;
+            border-radius: 50%;
+        }
+    }
+
+
+    .single-activity-log {
+        .user-image {
+            img {
+                border-radius: 50%;
+            }
+        }
+    }
+
+    .log-date {
+        position: relative;
+        padding: 5px 0;
+
+        &::before {
+            position: absolute;
+            content: '';
+            top: 0;
+            left: 0;
+            width: 100%;
+            border: 1px dashed #f5f5f5;
+        }
+
+        &::after {
+            position: absolute;
+            content: '';
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            border: 1px dashed #f5f5f5;
+        }
+    }
+
+    .review-border {
+        border-right: 2px dashed #f5f5f5;
+    }
+
+    .review-user-list {
+        ul {
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+
+        li {
+            list-style: none;
+            margin-right: 12px;
+
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+
+        .review-user {
+            img {
+                height: 65px;
+                width: 65px;
+                border-radius: 50%;
+            }
+        }
+    }
+
+    .notification-list {
+        ul {
+            padding: 0;
+            margin: 0;
+        }
+
+        li {
+            list-style: none;
+            border-bottom: 1px solid #f5f5f5;
+
+            &:last-child {
+                border-bottom: none;
+            }
+        }
+    }
+
+    .single-notification {
+        padding: 16px 12px;
+
+        &:hover {
+            background-color: #f5f5f5;
+        }
+    }
+
+    .chat-list {
+        padding: 0;
+        margin: 0;
+
+        li {
+            list-style: none;
+            margin-top: 42px;
+        }
+
+        .chat-img {
+            display: inline-block;
+            width: 45px;
+            vertical-align: top;
+
+            img {
+                width: 45px;
+                border-radius: 50%;
+            }
+        }
+
+        .chat-box {
+            border-radius: 4px;
+            padding: 10px;
+            display: inline-block;
+        }
+
+        .chat-content {
+            width: calc(100% - 140px);
+            display: inline-block;
+            padding-left: 15px;
+        }
+
+        .chat-time {
+            display: inline-block;
+            text-align: right;
+            width: 80px;
+            font-size: 12px;
+            color: #bcc3d3;
+        }
+    }
+
+    .chat-list {
+        li.odd {
+            .chat-content {
+                text-align: right;
+                width: calc(100% - 90px);
+            }
+        }
+    }
+
+    .chat-form {
+        border-top: 1px solid #f5f5f5;
+
+        .send-btn {
+            mat-icon {
+                transform: rotate(-45deg);
+            }
+
+        }
+    }
+
+    .report-card {
+        color: #ffffff;
+        padding: 16px 24px;
+    }
+
+    .export-pdf,
+    .view-all-screenshot {
+        font-size: 12px !important;
+    }
+
+    .screenshot-list {
+        li {
+            list-style: none;
+            border-bottom: 1px solid #f5f5f5;
+            padding: 16px 0;
+
+            &:first-child {
+                padding-top: 0;
+            }
+
+            &:last-child {
+                border-bottom: none;
+                padding-bottom: 0;
+            }
+
+            button {
+                min-width: 70px;
+            }
+        }
+    }
+
+    ::ng-deep {
+        .mat-fab .mat-button-wrapper {
+            line-height: 18px !important;
+        }
+
+        .chat-form {
+            .mat-form-field {
+                .mat-form-field-wrapper {
+                    margin: 0;
+                    padding: 0;
+                }
+            }
+        }
+    }
+}

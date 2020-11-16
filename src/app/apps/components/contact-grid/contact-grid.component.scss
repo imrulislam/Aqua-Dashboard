@@ -1,0 +1,31 @@
+:host {
+    .contact-grid-list {
+        margin-left: -16px;
+        margin-right: -16px;
+
+        .single-contact {
+            position: relative;
+            margin: 16px;
+        }
+    }
+
+    .contact-image {
+        img {
+            border-radius: 50%;
+            height: 70px;
+            width: 70px;
+        }
+    }
+
+    .contact-action {
+        position: absolute;
+        right: 10px;
+        top: 10px;
+    }
+
+    .social-link {
+        button {
+            box-shadow: 0 3px 1px -2px rgba(0, 0, 0, .2), 0 2px 2px 0 rgba(0, 0, 0, .14), 0 1px 5px 0 rgba(0, 0, 0, .12);
+        }
+    }
+}

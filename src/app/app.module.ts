@@ -4,28 +4,36 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { Routes, RouterModule } from '@angular/router';
-import { SidenavComponent } from './sidenav/sidenav.component';
 import { ToolbarComponent } from './toolbar/toolbar.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { MaterialModule } from './shared/material.module';
 import { HttpClientModule } from '@angular/common/http';
-import { UserService } from './services/user.service';
+import { ShellComponent } from './shell/shell.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 const routes: Routes = [
-  { path: 'contactlist', loadChildren: './contactmanager/contactmanager.module#ContactmanagerModule' },
-  { path: 'charts', loadChildren: './charts/chart.module#ChartModule' },
-  { path: 'table', loadChildren: './table/table.module#TableModule' },
   {
-    path: 'ui-component', loadChildren: './ui-components/ui-components.module#UiComponentModule'
+    path: '', component: ShellComponent,
+    children: [
+      { path: 'dashboard', loadChildren: () => import('./dashboard/dashboard.module').then(m => m.DashboardModule) },
+      { path: 'apps', loadChildren: () => import('./apps/apps.module').then(m => m.AppsModule) },
+      { path: 'inbox', loadChildren: () => import('./inbox/inbox.module').then(m => m.MailBoxModule) },
+      { path: 'my-drive', loadChildren: () => import('./my-drive/my-drive.module').then(m => m.MyDriveModule) },
+      { path: '', pathMatch: 'full', redirectTo: 'dashboard' }
+    ]
   },
-  { path: '**', redirectTo: 'contactlist' }
+  {
+    path: 'auth', loadChildren: () => import('./login/login.module').then(m => m.LoginModule),
+  },
+  { path: '**', component: PageNotFoundComponent }
 ];
 
 @NgModule({
   declarations: [
     AppComponent,
-    SidenavComponent,
-    ToolbarComponent
+    ToolbarComponent,
+    ShellComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
@@ -33,9 +41,9 @@ const routes: Routes = [
     FlexLayoutModule,
     MaterialModule,
     HttpClientModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes, {scrollPositionRestoration: 'enabled'})
   ],
-  providers: [UserService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

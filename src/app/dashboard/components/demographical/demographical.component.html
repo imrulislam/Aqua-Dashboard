@@ -1,0 +1,366 @@
+<div class="demographical-dashboard">
+    <div class="page-title mb-32">
+        <h1 class="font-size-20 line-height-20 font-weight-400 mb-4">Demographical Dashboard</h1>
+        <div class="breadcrumb">
+            <ul>
+                <li><a class="secondary-text" href="">Home</a></li>
+                <li><a class="active" href="">Dashboard 2</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div fxLayout.gt-sm="row" fxLayout="column" fxLayoutGap="32px" class="mb-32">
+        <div fxFlex.gt-sm="25%" fxFlex>
+            <div class="card bg-accent-A100">
+                <div fxLayout="row" fxLayoutAlign="start center">
+                    <div class="mr-16 round success-bg">
+                        <span class="material-icons">account_circle</span>
+                    </div>
+                    <div>
+                        <p class="text-color font-size-24 muli-light">2346</p>
+                        <p class="hint-text">Total Visits</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div fxFlex.gt-sm="25%" fxFlex>
+            <div class="card bg-accent-A100">
+                <div fxLayout="row" fxLayoutAlign="start center">
+                    <div class="mr-16 round info-bg">
+                        <span class="material-icons">euro</span>
+                    </div>
+                    <div>
+                        <p class="text-color font-size-24 muli-light">8,759</p>
+                        <p class="hint-text">Total Revenue</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div fxFlex.gt-sm="25%" fxFlex>
+            <div class="card bg-accent-A100">
+                <div fxLayout="row" fxLayoutAlign="start center">
+                    <div class="mr-16 round accent-bg">
+                        <span class="material-icons">inbox</span>
+                    </div>
+                    <div>
+                        <p class="text-color font-size-24 muli-light">2,356</p>
+                        <p class="hint-text">Emails Sent</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div fxFlex.gt-sm="25%" fxFlex>
+            <div class="card bg-accent-A100">
+                <div fxLayout="row" fxLayoutAlign="start center">
+                    <div class="mr-16 round danger-bg">
+                        <span class="material-icons">trending_down</span>
+                    </div>
+                    <div>
+                        <p class="text-color font-size-24 muli-light">37%</p>
+                        <p class="hint-text">Bounce Rate</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div fxLayout.gt-sm="row" fxLayout="column" fxLayoutGap="32px" class="mb-32">
+        <div fxFlex.gt-sm="70%" fxFlex>
+            <div class="card bg-accent-A100">
+                <div fxLayout="row" fxLayoutAlign="space-between center" class="mb-32">
+                    <p class="text-color font-size-20 line-height-20">Newsletter Campaign
+                    </p>
+                    <div class="income-legend">
+                        <ul>
+                            <li>
+                                <div fxLayout="row" fxLayoutAlign="center center">
+                                    <span class="material-icons text-success">
+                                        fiber_manual_record
+                                    </span>
+                                    <p class="font-size-14 hint-text">Open Rate</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div fxLayout="row" fxLayoutAlign="center center">
+                                    <span class="material-icons text-info">
+                                        fiber_manual_record
+                                    </span>
+                                    <p class="font-size-14 hint-text">Payment</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="chart-wrapper mb-40">
+                    <canvas baseChart [datasets]="lineChartData" [labels]="lineChartLabels" [options]="lineChartOptions"
+                        [colors]="lineChartColors" [chartType]="lineChartType" [plugins]="lineChartPlugins">
+                    </canvas>
+                </div>
+                <div fxLayout.gt-sm="row" fxLayout="column" fxLayoutGap="32px">
+                    <div fxFlex.gt-sm="33%" fxFlex class="text-center">
+                        <p class="text-color muli-light font-size-34 line-height-34 mb-8">5098</p>
+                        <p class="text-color muli-light font-size-12 line-height-12">Total Sent</p>
+                    </div>
+                    <div fxFlex.gt-sm="33%" fxFlex class="text-center">
+                        <p class="text-color muli-light font-size-34 line-height-34 mb-8">4156</p>
+                        <p class="text-color muli-light font-size-12 line-height-12">Mail Open Rate</p>
+                    </div>
+                    <div fxFlex.gt-sm="33%" fxFlex class="text-center">
+                        <p class="text-color muli-light font-size-34 line-height-34 mb-8">1369</p>
+                        <p class="text-color muli-light font-size-12 line-height-12">Click Rate</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div fxFlex.gt-sm="30%" fxFlex>
+            <div class="card bg-accent-A100">
+                <p class="text-color font-size-20 line-height-20">Bandwidth usage</p>
+                <p class="hint-text font-size-14">March 2020</p>
+                <div>
+                    <div class="donought-chart-wrapper">
+                        <canvas baseChart [data]="doughnutChartData" [options]="doughnutChartOptions"
+                            [colors]="doughnutChartColors" [labels]="doughnutChartLabels"
+                            [chartType]="doughnutChartType">
+                        </canvas>
+                    </div>
+                </div>
+                <div>
+                    <p class="text-success font-size-24">68 TB</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div fxLayout.gt-sm="row" fxLayout="column" fxLayoutGap="32px" class="mb-32">
+        <div fxFlex.gt-sm="40%" fxFlex>
+            <div class="card bg-accent-A100">
+                <div class="mb-32">
+                    <p class="text-color font-size-20 line-height-20 mb-4">Today's Schedule
+                    </p>
+                    <p class="font-size-14 line-height-14 hint-text">check out your daily schedule
+                    </p>
+                </div>
+                <div class="schedule-list">
+                    <ul>
+                        <li>
+                            <div fxLayout="row" fxLayoutAlign="start start">
+                                <div class="schedule-user mr-24">
+                                    <img src="../../../../assets/images/profile.jpg" alt="Schedule image">
+                                </div>
+                                <div class="schedule-description">
+                                    <p class="text-color muli-semibold">Meeting Today <span
+                                            class="font-size-14 ml-16 hint-text">5pm</span></p>
+                                    <p class="hint-text muli-light">you can write anything</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div fxLayout="row" fxLayoutAlign="start start">
+                                <div class="schedule-user mr-24">
+                                    <img src="../../../../assets/images/profile.jpg" alt="Schedule image">
+                                </div>
+                                <div class="schedule-description">
+                                    <p class="text-color muli-semibold">Send documents to Clark <span
+                                            class="font-size-14 ml-16 hint-text">5pm</span></p>
+                                    <p class="hint-text muli-light">Lorem, ipsum dolor sit amet consectetur adipisicing
+                                        elit. Est iusto dolor similique.</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div fxLayout="row" fxLayoutAlign="start start">
+                                <div class="schedule-user mr-24">
+                                    <img src="../../../../assets/images/profile.jpg" alt="Schedule image">
+                                </div>
+                                <div class="schedule-description">
+                                    <p class="text-color muli-semibold">John Doe <span
+                                            class="font-size-14 ml-16 hint-text">5pm</span></p>
+                                    <p class="hint-text muli-light">Call today with gohn doe</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div fxLayout="row" fxLayoutAlign="start start">
+                                <div class="schedule-user mr-24">
+                                    <img src="../../../../assets/images/profile.jpg" alt="Schedule image">
+                                </div>
+                                <div class="schedule-description">
+                                    <p class="text-color muli-semibold">John Deo <span
+                                            class="font-size-14 ml-16 hint-text">5pm</span></p>
+                                    <p class="hint-text muli-light">Approve meeting with tiger</p>
+
+                                    <div fxLayout="row" fxLayoutGap="16px" class="mt-24">
+                                        <button mat-flat-button color="primary">Primary</button>
+                                        <button mat-flat-button color="warn">Warn</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div fxLayout="row" fxLayoutAlign="start start">
+                                <div class="schedule-user mr-24">
+                                    <img src="../../../../assets/images/profile.jpg" alt="Schedule image">
+                                </div>
+                                <div class="schedule-description">
+                                    <p class="text-color muli-semibold">John Doe <span
+                                            class="font-size-14 ml-16 hint-text">5pm</span></p>
+                                    <p class="hint-text muli-light">Call today with gohn doe</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div fxLayout="row" fxLayoutAlign="start start">
+                                <div class="schedule-user mr-24">
+                                    <img src="../../../../assets/images/profile.jpg" alt="Schedule image">
+                                </div>
+                                <div class="schedule-description">
+                                    <p class="text-color muli-semibold">John Doe <span
+                                            class="font-size-14 ml-16 hint-text">5pm</span></p>
+                                    <p class="hint-text muli-light">Call today with gohn doe</p>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div fxFlex.gt-sm="60%" fxFlex>
+            <div class="card bg-accent-A100">
+                <div fxLayout="row" fxLayoutAlign="space-between start">
+                    <div>
+                        <p class="text-color font-size-20 line-height-20 mb-4">Monthly Sales Overview</p>
+                        <p class="font-size-14 line-height-14 hint-text">Check the monthly sales
+                        </p>
+                    </div>
+                    <div>
+                        <mat-form-field class="w-120">
+                            <mat-label>Month</mat-label>
+                            <mat-select>
+                                <mat-option value="January">January</mat-option>
+                                <mat-option value="February">February</mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                    </div>
+                </div>
+            </div>
+            <div class="sales-overview-title p-24 pt-40 pb-40">
+                <div fxLayout.gt-sm="row" fxLayout="column" fxLayoutAlign="space-between center">
+                    <div>
+                        <p class="muli-light text-color font-size-34 line-height-34">March 2020</p>
+                        <p class="muli-light text-color font-size-18 line-height-18"> Report for this month</p>
+                    </div>
+                    <div>
+                        <p class="muli-light text-info font-size-40 line-height-40">$3690</p>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-accent-A100 pb-24">
+                <div>
+                    <mat-table [dataSource]="dataSource">
+                        <!-- Name Column -->
+                        <ng-container matColumnDef="assigned">
+                            <mat-header-cell *matHeaderCellDef> Assigned </mat-header-cell>
+                            <mat-cell *matCellDef="let element">
+                                <div fxLayout="row">
+                                    <div class="mr-24">
+                                        <ngx-avatar name="{{element.assigned}}"></ngx-avatar>
+                                    </div>
+                                    <div>
+                                        <p class="text-color">{{element.assigned}}</p>
+                                        <span class="hint-text">{{element.designation}}</span>
+                                    </div>
+                                </div>
+                            </mat-cell>
+                        </ng-container>
+
+                        <!-- Weight Column -->
+                        <ng-container matColumnDef="project">
+                            <mat-header-cell *matHeaderCellDef> project </mat-header-cell>
+                            <mat-cell *matCellDef="let element"> <span class="text-color">{{element.project}}</span>
+                            </mat-cell>
+                        </ng-container>
+
+                        <!-- Symbol Column -->
+                        <ng-container matColumnDef="priority">
+                            <mat-header-cell *matHeaderCellDef> Priority </mat-header-cell>
+                            <mat-cell *matCellDef="let element">
+                                <div>
+                                    <span class="label label-round"
+                                        [ngClass]="{'bg-primary-500':element.priority === 'High', 'bg-accent-500':element.priority === 'Medium', 'bg-warn-500':element.priority === 'Low'}">{{element.priority}}</span>
+                                </div>
+                            </mat-cell>
+                        </ng-container>
+
+                        <!-- Symbol Column -->
+                        <ng-container matColumnDef="budget">
+                            <mat-header-cell *matHeaderCellDef> Budget </mat-header-cell>
+                            <mat-cell *matCellDef="let element"> <span class="text-color">$ {{element.budget}}</span>
+                            </mat-cell>
+                        </ng-container>
+
+                        <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+                        <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+                    </mat-table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div fxLayout.gt-sm="row" fxLayout="column" fxLayoutGap="32px" class="mb-32">
+        <div fxFlex.gt-sm="70%" fxFlex>
+            <div class="card bg-accent-A100">
+                <div fxLayout="row" fxLayoutAlign="space-between center" class="mb-32">
+                    <p class="text-color font-size-20 line-height-20">Income of the year</p>
+                    <div class="income-legend">
+                        <ul>
+                            <li>
+                                <div fxLayout="row" fxLayoutAlign="center center">
+                                    <span class="material-icons text-success">
+                                        fiber_manual_record
+                                    </span>
+                                    <p class="font-size-14 hint-text">Growth</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div fxLayout="row" fxLayoutAlign="center center">
+                                    <span class="material-icons text-info">
+                                        fiber_manual_record
+                                    </span>
+                                    <p class="font-size-14 hint-text">Net</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="bar-chart-wrapper">
+                    <canvas baseChart [datasets]="barChartData" [colors]="barChartColors" [labels]="barChartLabels"
+                        [options]="barChartOptions" [plugins]="barChartPlugins" [legend]="barChartLegend"
+                        [chartType]="barChartType">
+                    </canvas>
+                </div>
+            </div>
+        </div>
+        <div fxFlex.gt-sm="30%" fxFlex>
+            <div class="blog-post bg-accent-A100">
+                <div class="blog-img">
+                    <img src="../../../../assets/images/technology.jpg" alt="Blog Image">
+                </div>
+                <div class="p-16">
+                    <div class="mb-24">
+                        <p class="font-size-20 mb-8">Business development of rules</p>
+                        <span class="bg-primary-500 label label-round font-size-12 mb-16">Technology</span>
+                        <p class="hint-text">Titudin venenatis ipsum aciat. Vestibu ullamer quam. nenatis ipsum ac
+                            feugiat.
+                            Ibulum ullamcorper.</p>
+                    </div>
+                    <div fxLayout="row" fxLayoutAlign="space-between center">
+                        <a class="read-more font-size-14" href="">Read More</a>
+                        <button mat-icon-button aria-label="Share Icon">
+                            <mat-icon>share</mat-icon>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

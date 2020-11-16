@@ -1,0 +1,101 @@
+:host {
+
+    .login-page-2-area {
+        //background-color: #f5f5f5;
+        position: relative;
+        min-height: 750px;
+        display: inline-table;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            background-image: url(../../../../assets/images/login-v22.svg);
+            background-position: right;
+            background-repeat: no-repeat;
+            background-size: cover;
+            z-index: -1;
+            opacity: 0.1;
+        }
+    }
+
+    .shadow-card {
+        padding: 0;
+        min-width: 950px;
+        max-width: 950px;
+        z-index: 1;
+        background-color: #fff;
+
+        @media (max-width:959px) {
+            min-width: 400px;
+            max-width: 100%;
+        }
+    }
+
+    .login-image-card {
+        background-image: url(../../../../assets/images/login-v22.svg);
+        background-position: right;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        z-index: 1;
+        color: #fff;
+
+        &::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color: #3a3a3a;
+            z-index: -1;
+            opacity: 0.3;
+        }
+    }
+
+    .google-btn {
+        background-color: #d73d32;
+        color: #fff;
+    }
+
+    .facebook-btn {
+        background-color: #3f5c9a;
+        color: #fff;
+    }
+
+    .login-btn {
+        min-width: 200px;
+    }
+
+    .or-text {
+
+        p {
+            display: inline-block;
+            position: relative;
+
+            &::before {
+                content: '';
+                right: 10px;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                position: absolute;
+                width: 50px;
+                height: 1px;
+                background-color: #bcc3d3;
+            }
+
+            &::after {
+                content: '';
+                left: 58px;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                position: absolute;
+                width: 50px;
+                height: 1px;
+                background-color: #bcc3d3;
+            }
+        }
+    }
+}

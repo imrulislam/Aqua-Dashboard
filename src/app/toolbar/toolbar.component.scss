@@ -1,21 +1,11 @@
-:host{
+:host {
   z-index: 22;
 }
 
 .sidenav-toggle {
-  display: none;
   padding: 0;
   margin: 0px;
-  @media (max-width: 959px) {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  mat-icon {
-    color: #fff;
-  }
-}
-
-.example-spacer {
-  flex: 1 1 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

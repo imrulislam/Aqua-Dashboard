@@ -1,0 +1,376 @@
+// Mixin for pre generated class
+@import "./mixin.scss";
+@import "./reset.scss";
+@import "./variables.scss";
+@import "./responsive.scss";
+@import "./angulary-font.scss";
+@import "./themes.scss";
+@import "./colors.scss";
+
+// @import '~ngx-owl-carousel-o/lib/styles/scss/owl.carousel';
+// @import '~ngx-owl-carousel-o/lib/styles/scss/owl.theme.default';
+$custom-typography: mat-typography-config($font-family: '"Muli-Light", sans-serif;');
+@include mat-core($custom-typography);
+
+* {
+    font-family: 'Muli-Light', sans-serif;
+}
+
+// Font face
+@font-face {
+    font-family: 'FontAwesome';
+    src: url('../assets/fonts/font-awesome/fontawesome-webfont.eot');
+    src: url('../assets/fonts/font-awesome/fontawesome-webfont.eot?#iefix') format('embedded-opentype'),
+        url('../assets/fonts/font-awesome/fontawesome-webfont.svg') format('svg'),
+        url('../assets/fonts/font-awesome/fontawesome-webfont.woff') format('woff'),
+        url('../assets/fonts/font-awesome/fontawesome-webfont.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Muli';
+    src: url('../assets/fonts/muli/Muli.eot');
+    src: url('../assets/fonts/muli/Muli.eot?#iefix') format('embedded-opentype'),
+        url('../assets/fonts/muli/Muli.svg#Muli') format('svg'),
+        url('../assets/fonts/muli/Muli.woff') format('woff'),
+        url('../assets/fonts/muli/Muli.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Muli-Light';
+    src: url('../assets/fonts/muli/Muli-Light.eot');
+    src: url('../assets/fonts/muli/Muli-Light.eot?#iefix') format('embedded-opentype'),
+        url('../assets/fonts/muli/Muli-Light.svg#Muli') format('svg'),
+        url('../assets/fonts/muli/Muli-Light.woff') format('woff'),
+        url('../assets/fonts/muli/Muli-Light.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Muli-SemiBold';
+    src: url('../assets/fonts/muli/Muli-SemiBold.eot');
+    src: url('../assets/fonts/muli/Muli-SemiBold.eot?#iefix') format('embedded-opentype'),
+        url('../assets/fonts/muli/Muli-SemiBold.svg#Muli') format('svg'),
+        url('../assets/fonts/muli/Muli-SemiBold.woff') format('woff'),
+        url('../assets/fonts/muli/Muli-SemiBold.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Muli-Semi-BoldItalic';
+    src: url('../assets/fonts/muli/Muli-Semi-BoldItalic.eot');
+    src: url('../assets/fonts/muli/Muli-Semi-BoldItalic.eot?#iefix') format('embedded-opentype'),
+        url('../assets/fonts/muli/Muli-Semi-BoldItalic.svg#Muli') format('svg'),
+        url('../assets/fonts/muli/Muli-Semi-BoldItalic.woff') format('woff'),
+        url('../assets/fonts/muli/Muli-Semi-BoldItalic.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Muli-Italic';
+    src: url('../assets/fonts/muli/Muli-Italic.eot');
+    src: url('../assets/fonts/muli/Muli-Italic.eot?#iefix') format('embedded-opentype'),
+        url('../assets/fonts/muli/Muli-Italic.svg#Muli') format('svg'),
+        url('../assets/fonts/muli/Muli-Italic.woff') format('woff'),
+        url('../assets/fonts/muli/Muli-Italic.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Muli-Bold';
+    src: url('../assets/fonts/muli/Muli-Bold.eot');
+    src: url('../assets/fonts/muli/Muli-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../assets/fonts/muli/Muli-Bold.svg#Muli') format('svg'),
+        url('../assets/fonts/muli/Muli-Bold.woff') format('woff'),
+        url('../assets/fonts/muli/Muli-Bold.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+
+// Main style start
+html,
+body {
+    height: 100%;
+    font-size: 16px;
+    color: #455a64;
+}
+
+.muli-light {
+    font-family: 'Muli-Light';
+}
+
+.muli-regular {
+    font-family: 'Muli';
+}
+
+.muli-semibold {
+    font-family: 'Muli-SemiBold';
+}
+
+.muli-bold {
+    font-family: 'Muli-Bold';
+}
+.not-found{
+    font-family: 'Chela One', Muli;
+}
+
+.h-100vh {
+    height: 100vh;
+}
+
+
+.card {
+    padding: 24px;
+}
+
+
+.shadow-card {
+    padding: 24px;
+    -webkit-box-shadow: 0px 1px 1px 1px rgba(0, 0, 0, 0.15);
+    -moz-box-shadow: 0px 1px 1px 1px rgba(0, 0, 0, 0.15);
+    box-shadow: 0px 1px 1px 1px rgba(0, 0, 0, 0.15);
+}
+
+.label {
+    display: inline-block;
+    align-items: center;
+    min-width: 50px;
+    height: 20px;
+    text-align: center;
+    padding: 0 7px;
+    font-size: 12px;
+    color: #fff;
+}
+
+.label-round {
+    border-radius: 30px;
+}
+
+.avatar-content {
+    font-family: 'Muli-Light' !important;
+}
+
+.mat-header-cell {
+    font-size: 12px;
+    color: #455a64;
+    text-transform: uppercase;
+    letter-spacing: 1.4px;
+    font-family: 'Muli-SemiBold';
+}
+
+.mat-row {
+    min-height: 75px;
+}
+
+.breadcrumb {
+    ul {
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: row;
+    }
+
+    li {
+        list-style: none;
+        position: relative;
+        padding-right: 32px;
+
+        &::before {
+            content: 'keyboard_arrow_right';
+            font-family: 'Material Icons';
+            display: inline-block;
+            font-size: 24px;
+            position: absolute;
+            right: 5px;
+            line-height: 18px;
+            color: #dcdcdc;
+            top: 6px;
+        }
+
+        &:last-child {
+            &::before {
+                display: none;
+            }
+
+            padding-right: 0px;
+        }
+    }
+
+    a {
+        cursor: pointer;
+        font-size: 12px;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-family: 'Muli';
+
+        &:hover,
+        &:visited,
+        &:focus,
+        &:active {
+            text-decoration: none;
+            color: #000;
+        }
+    }
+
+    a.active {
+        pointer-events: none;
+        color: #000;
+    }
+}
+
+.footer {
+    color: #67757c;
+    padding: 17px 15px;
+    border-top: 1px solid rgba(120, 130, 140, 0.13);
+    background: #ffffff;
+}
+
+.round {
+    line-height: 48px;
+    color: #ffffff;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mat-progress-bar {
+    height: 6px !important;
+    border-radius: 8px;
+}
+
+.mat-progress-bar-buffer {
+    background-color: #f5f5f5 !important;
+}
+
+button {
+    letter-spacing: 1.2px;
+}
+
+.mat-form-field-infix {
+
+    input,
+    textarea {
+        line-height: 16px;
+    }
+}
+
+.calendar {
+
+    .cal-month-view .cal-day-badge {
+        background-color: #24d2b5;
+    }
+
+    .cal-month-view .cal-open-day-events>div mwl-calendar-event-title {
+        -webkit-box-flex: 1;
+        flex: 1;
+        outline: none !important;
+    }
+
+    .cal-month-view .cal-event-title:hover {
+        text-decoration: none !important;
+    }
+
+    .cal-month-view .cal-open-day-events>div mwl-calendar-event-actions .cal-event-actions {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .cal-month-view .cal-open-day-events {
+        box-shadow: none !important;
+        background-color: #f5f5f5;
+        color: #455a64 !important;
+    }
+
+    .cal-open-day-events {
+        div {
+            padding: 16px;
+            margin: 8px 16px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: flex-start;
+            box-shadow: 0 2px 1px -1px rgba(0, 0, 0, .2), 0 1px 1px 0 rgba(0, 0, 0, .14), 0 1px 3px 0 rgba(0, 0, 0, .12);
+            -webkit-transition: box-shadow .3s ease;
+            transition: box-shadow .3s ease;
+            background-color: #ffffff;
+        }
+    }
+
+    .mat-button-toggle-group {
+        mat-button-toggle.active {
+            background-color: #1bc7a5;
+            color: #ffffff;
+        }
+    }
+
+    .cal-month-view .cal-event {
+        margin-right: 12px;
+    }
+
+    .cal-event-actions {
+        a {
+            .material-icons {
+                font-size: 18px;
+            }
+
+            &:hover {
+                text-decoration: none;
+            }
+
+            &:first-child {
+                margin-right: 8px;
+            }
+
+            &:first-child,
+            &:last-child {
+                color: #455a64;
+            }
+        }
+    }
+}
+
+.custom-dialog {
+    width: 600px !important;
+
+    @media only screen and (max-width: 767px) {
+        width: 80vw !important;
+    }
+}
+
+.avatar-img {
+    width: 72px;
+    height: 72px;
+    margin: 0;
+    border-radius: 50%;
+    text-align: center;
+}
+
+.ps__rail-y {
+    left: auto !important;
+}
+
+.drive-container {
+    .mat-drawer-content {
+        overflow: hidden !important;
+    }
+}
+
+.sticky-feature {
+    position: fixed;
+    top: 0;
+}

@@ -1,0 +1,106 @@
+<div class="calendar">
+    <div fxLayout="row" fxLayoutAlign="space-between center" class="mb-32">
+        <div class="page-title">
+            <h1 class="font-size-20 line-height-20 font-weight-400 mb-4">Calendar</h1>
+            <div class="breadcrumb">
+                <ul>
+                    <li><a class="secondary-text" href="">Home</a></li>
+                    <li><a class="active" href="">Calendar</a></li>
+                </ul>
+            </div>
+        </div>
+        <div>
+            <button mat-raised-button color="primary">Add Event</button>
+        </div>
+    </div>
+
+    <div class="mat-elevation-z2 bg-accent-A100 mb-16">
+        <div class="p-16" fxLayout.gt-sm="row" fxLayout="column" fxLayoutGap="24px" fxLayoutAlign="start center">
+            <div fxLayout="row" fxLayoutGap="16px" fxFlex.gt-sm="33%" fxFlex>
+                <div>
+                    <button mat-raised-button class="mr-4" color="primary" mwlCalendarPreviousView [view]="view"
+                        [(viewDate)]="viewDate" (viewDateChange)="closeOpenMonthViewDay()">
+                        <mat-icon>chevron_left</mat-icon>
+                    </button>
+                    <button mat-raised-button color="primary" mwlCalendarNextView [view]="view" [(viewDate)]="viewDate"
+                        (viewDateChange)="closeOpenMonthViewDay()">
+                        <mat-icon>chevron_right</mat-icon>
+                    </button>
+                </div>
+                <div>
+                    <button mat-raised-button color="primary" mwlCalendarToday [(viewDate)]="viewDate">Today</button>
+                </div>
+            </div>
+            <div fxFlex.gt-sm="33%" fxFlex>
+                <div class="text-center">
+                    <p class="muli-semibold text-color font-size-20">{{ viewDate | date}}</p>
+                </div>
+            </div>
+            <div fxFlex.gt-sm="33%" fxFlex>
+                <div class="text-right">
+                    <mat-button-toggle-group name="fontStyle" aria-label="Font Style">
+                        <mat-button-toggle color="primary" value="Month" (click)="setView(CalendarView.Month)"
+                            [class.active]="view === CalendarView.Month">Month</mat-button-toggle>
+                        <mat-button-toggle color="primary" value="Week" (click)="setView(CalendarView.Week)"
+                            [class.active]="view === CalendarView.Week">Week</mat-button-toggle>
+                        <mat-button-toggle color="primary" value="Day" (click)="setView(CalendarView.Day)"
+                            [class.active]="view === CalendarView.Day">Day</mat-button-toggle>
+                    </mat-button-toggle-group>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="mat-elevation-z2 bg-accent-A100 mb-32">
+        <div [ngSwitch]="view">
+            <mwl-calendar-month-view *ngSwitchCase="CalendarView.Month" [viewDate]="viewDate" [events]="events"
+                [refresh]="refresh" [activeDayIsOpen]="activeDayIsOpen" (dayClicked)="dayClicked($event.day)"
+                (eventClicked)="handleEvent('Clicked', $event.event)" (eventTimesChanged)="eventTimesChanged($event)">
+            </mwl-calendar-month-view>
+            <mwl-calendar-week-view *ngSwitchCase="CalendarView.Week" [viewDate]="viewDate" [events]="events"
+                [refresh]="refresh" (eventClicked)="handleEvent('Clicked', $event.event)"
+                (eventTimesChanged)="eventTimesChanged($event)">
+            </mwl-calendar-week-view>
+            <mwl-calendar-day-view *ngSwitchCase="CalendarView.Day" [viewDate]="viewDate" [events]="events"
+                [refresh]="refresh" (eventClicked)="handleEvent('Clicked', $event.event)"
+                (eventTimesChanged)="eventTimesChanged($event)">
+            </mwl-calendar-day-view>
+        </div>
+    </div>
+</div>
+
+
+<ng-template #addEventDialog>
+    <h2 mat-dialog-title>Edit Event</h2>
+    <mat-dialog-content class="mat-typography">
+        <div class="mb-24" fxLayout="column" fxLayoutAlign="start" fxLayout.gt-md="row">
+            Edit event Work
+        </div>
+    </mat-dialog-content>
+    <mat-dialog-actions align="end">
+        <button mat-flat-button mat-dialog-close>Cancel</button>
+        <button mat-button color="primary" [mat-dialog-close]="true" cdkFocusInitial> 
+            Edit Event
+        </button>
+    </mat-dialog-actions>
+
+</ng-template>
+
+
+<ng-template #deleteEventDialog>
+    <h2 mat-dialog-title>Delete Event</h2>
+    <mat-dialog-content class="mat-typography">
+        <div class="mb-24" fxLayout="column" fxLayoutAlign="start" fxLayout.gt-md="row">
+            Delete Event Work
+        </div>
+    </mat-dialog-content>
+    <mat-dialog-actions align="end">
+        <button mat-flat-button mat-dialog-close>Cancel</button>
+        <button mat-button color="primary" [mat-dialog-close]="true" cdkFocusInitial> 
+            Add Event
+        </button>
+    </mat-dialog-actions>
+
+</ng-template>
+<!-- *ngIf="updateCarTrimForm.valid" -->

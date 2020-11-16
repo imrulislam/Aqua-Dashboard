@@ -1,0 +1,209 @@
+:host {
+
+    .add-files {
+        min-height: 40px;
+        padding: 8px;
+        cursor: pointer;
+        border-radius: 15px;
+
+        &:hover {
+            background-color: #f5f5f5;
+        }
+    }
+
+    .drive-search {
+        input {
+            border: 2px solid #f5f5f5;
+            border-radius: 15px;
+            min-height: 45px;
+            padding: 0px 16px;
+        }
+    }
+
+    .mat-drawer-container {
+        background-color: #ffffff;
+    }
+
+    .mat-drawer-side.mat-drawer-end {
+        border-left: solid 1px #f5f5f5 !important;
+    }
+
+    .file-info-sidenav {
+        width: 350px;
+        max-width: 350px;
+    }
+
+    .file-list {
+        margin-top: -8px;
+        margin-left: -8px;
+        margin-right: -8px;
+    }
+
+    .single-file {
+        border-radius: 6px;
+        margin: 8px;
+        min-width: 270px;
+        cursor: pointer;
+
+        &:focus,
+        &:active {
+            .file-name {
+                background-color: #f5f5f5;
+            }
+        }
+
+        .file-icon {
+            display: flex;
+            min-height: 150px;
+            max-height: 150px;
+            position: relative;
+
+            mat-icon {
+                font-size: 40px;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+        }
+
+        .file-image {
+            min-height: 150px;
+            max-height: 150px;
+            position: relative;
+            overflow: hidden;
+
+            img {
+                position: absolute;
+                top: 0;
+                height: auto;
+                width: 100%;
+            }
+        }
+
+        .file-name {
+            min-height: 48px;
+            text-align: left;
+            display: flex;
+            align-items: center;
+            padding: 0 8px;
+        }
+    }
+
+    .file-active {
+        .file-name {
+            background-color: #f5f5f5;
+        }
+
+        .folder {
+            background-color: #f5f5f5;
+        }
+    }
+
+
+    .folder {
+        border-radius: 6px;
+        margin: 8px;
+        min-width: 270px;
+        cursor: pointer;
+
+        &:focus,
+        &:active {
+            background-color: #f5f5f5;
+        }
+    }
+
+    .drive-menu {
+        .mat-expansion-panel:not([class*='mat-elevation-z']) {
+            box-shadow: none !important;
+        }
+
+        .mat-expansion-panel .mat-expansion-panel-header.cdk-keyboard-focused:not([aria-disabled='true']),
+        .mat-expansion-panel .mat-expansion-panel-header.cdk-program-focused:not([aria-disabled='true']),
+        .mat-expansion-panel:not(.mat-expanded) .mat-expansion-panel-header:hover:not([aria-disabled='true']) {
+            background: transparent !important;
+        }
+
+        .mat-expansion-panel-spacing {
+            margin: 0 !important;
+        }
+
+        .mat-expanded {
+            background-color: #f5f5f5;
+        }
+
+        ::ng-deep {
+            .mat-expansion-panel-body {
+                ul {
+                    padding: 0;
+                    margin: 0;
+                }
+
+                li {
+                    list-style: none;
+                    padding-left: 40px;
+
+                    a {
+                        height: 48px;
+                    }
+                }
+            }
+        }
+
+        .nav-link {
+            text-decoration: none !important;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+            user-select: none;
+            transition: all 0.4s;
+            font-size: 14px;
+            letter-spacing: 1.4px;
+            font-weight: 400;
+
+            mat-icon {
+                margin-right: 12px;
+                color: #455a64;
+            }
+        }
+
+        .nav-link-icon {
+            font-size: 16px;
+            width: 16px;
+            height: 16px;
+            min-width: 16px;
+            min-height: 16px;
+            line-height: 16px;
+        }
+
+        .active {
+            color: #24d2b5;
+
+            .nav-link-icon {
+                color: #24d2b5;
+            }
+        }
+
+        .nav-link-item {
+            text-decoration: none !important;
+            display: flex;
+            height: 48px;
+            padding: 0 24px;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+            user-select: none;
+            transition: all 0.4s;
+            font-size: 14px;
+            letter-spacing: 1.4px;
+            font-weight: 400;
+
+            mat-icon {
+                margin-right: 12px;
+            }
+        }
+    }
+}

@@ -1,0 +1,222 @@
+<div class="contact-details">
+    <div fxLayout="row" fxLayoutAlign="space-between center" class="mb-32">
+        <div class="page-title">
+            <h1 class="font-size-20 line-height-20 font-weight-400 mb-4">My Drive</h1>
+            <div class="breadcrumb">
+                <ul>
+                    <li><a class="secondary-text" href="">Home</a></li>
+                    <li><a class="active" href="">my-drive</a></li>
+                </ul>
+            </div>
+        </div>
+        <div>
+            <button mat-raised-button color="primary" [matMenuTriggerFor]="menu">Add File</button>
+            <mat-menu #menu="matMenu">
+                <button mat-menu-item>
+                    <mat-icon>create_new_folder</mat-icon>
+                    <span>New Folder</span>
+                </button>
+                <mat-divider></mat-divider>
+                <button mat-menu-item>
+                    <mat-icon>insert_drive_file</mat-icon>
+                    <span>Upload Files</span>
+                </button>
+                <button mat-menu-item>
+                    <mat-icon>folder</mat-icon>
+                    <span>Upload Folders</span>
+                </button>
+            </mat-menu>
+        </div>
+    </div>
+
+    <div fxLayout="row" fxLayoutAlign="space-between center" fxLayoutGap="16px" 
+        class="border-accent-300 border-bottom-1px-solid bg-accent-A100 mb-8 pt-8 pb-8 pl-16 pr-16">
+        <div>
+            <button mat-button [matMenuTriggerFor]="menu"><span class="muli-bold">My Drive</span>
+                <mat-icon class="h-20">arrow_drop_down</mat-icon>
+            </button>
+            <mat-menu #menu="matMenu">
+                <button mat-menu-item>
+                    <mat-icon>create_new_folder</mat-icon>
+                    <span>New Folder</span>
+                </button>
+                <mat-divider></mat-divider>
+                <button mat-menu-item>
+                    <mat-icon>insert_drive_file</mat-icon>
+                    <span>Upload Files</span>
+                </button>
+                <button mat-menu-item>
+                    <mat-icon>folder</mat-icon>
+                    <span>Upload Folders</span>
+                </button>
+            </mat-menu>
+        </div>
+        <div fxLayout="row" fxLayoutGap="5px">
+            <div class="border-accent-300 border-right-1px-solid pr-8" *ngIf="showToolBarGroupBtn"
+                (click)="$event.stopPropagation()">
+                <button mat-icon-button aria-label="Link this file">
+                    <mat-icon>link</mat-icon>
+                </button>
+                <button mat-icon-button aria-label="Share this file to any user">
+                    <mat-icon>person_add</mat-icon>
+                </button>
+                <button mat-icon-button aria-label="Delete this file">
+                    <mat-icon>delete_outline</mat-icon>
+                </button>
+                <button mat-icon-button aria-label="More Actions">
+                    <mat-icon>more_vert</mat-icon>
+                </button>
+            </div>
+            <div (click)="$event.stopPropagation()">
+                <button mat-icon-button aria-label="List view">
+                    <mat-icon>view_list</mat-icon>
+                </button>
+                <button mat-icon-button aria-label="More info" (click)="drawer.toggle()">
+                    <mat-icon>info</mat-icon>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div fxLayout.gt-sm="row" fxLayout="column" class="bg-accent-A100 h-100vh">
+        <div fxFlex.gt-sm="20%" fxFlex.md="30%" fxFlex fxHide fxShow.gt-sm
+            class="border-accent-300 border-right-1px-solid">
+            <div class="p-24">
+                <div class="drive-search w-100-p">
+                    <input class="w-100-p" matInput type="text" matInput placeholder="Ex. Name">
+                </div>
+            </div>
+            <div class="drive-menu">
+                <mat-accordion>
+                    <mat-expansion-panel>
+                        <mat-expansion-panel-header [collapsedHeight]="'48px'" [expandedHeight]="'48px'">
+                            <a class="nav-link">
+                                <mat-icon class="nav-link-icon">all_inbox</mat-icon>
+                                Inbox
+                            </a>
+                        </mat-expansion-panel-header>
+
+                        <ul>
+                            <li>
+                                <a class="nav-link" routerLinkActive="active">
+                                    <mat-icon class="nav-link-icon">folder</mat-icon>
+                                    My Folder One
+                                </a>
+                            </li>
+                            <li>
+                                <a class="nav-link" routerLinkActive="active">
+                                    <mat-icon class="nav-link-icon">folder</mat-icon>
+                                    My Folder Two
+                                </a>
+                            </li>
+                            <li>
+                                <a class="nav-link" routerLinkActive="active">
+                                    <mat-icon class="nav-link-icon">folder</mat-icon>
+                                    My Folder Three
+                                </a>
+                            </li>
+                        </ul>
+                    </mat-expansion-panel>
+                </mat-accordion>
+                <a class="nav-link-item">
+                    <mat-icon class="nav-link-icon">people_alt</mat-icon>
+                    Shared with me
+                </a>
+                <a class="nav-link-item">
+                    <mat-icon class="nav-link-icon">schedule</mat-icon>
+                    Recent
+                </a>
+                <a class="nav-link-item">
+                    <mat-icon class="nav-link-icon">star</mat-icon>
+                    Starred
+                </a>
+                <a class="nav-link-item">
+                    <mat-icon class="nav-link-icon">delete_outline</mat-icon>
+                    Trash
+                </a>
+            </div>
+        </div>
+        <div class="drive-container" fxFlex.gt-sm="80%" fxFlex.md="70%" fxFlex fxLayout.gt-sm="row" fxLayout="column">
+            <mat-drawer-container class="w-100-p h-100-p">
+                <mat-drawer #drawer class="file-info-sidenav" mode="side" position="end">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adasdf d fadsasdf asdf ipisci ullam quas
+                        sequi quod quis nisi nemo reprehenderit animi illum perferendis.</p>
+                </mat-drawer>
+                <div class="drive-content p-24">
+                    <div class="quick-access mb-32 border-bottom-2px-dashed pb-32 border-accent-300">
+                        <p class="muli-semibold text-color mb-16">Quick Access</p>
+                        <div fxLayout="row wrap" fxLayoutAlign="start start" class="file-list">
+                            <div tabindex="0" class="single-file border-1px-solid border-accent-300"
+                                (click)="fileSelect($event, 1)" [ngClass]="{'file-active':selectedIndex === 1}">
+                                <div class="border-bottom-1px-solid border-accent-300">
+                                    <div *ngIf="false" class="file-icon">
+                                        <mat-icon>picture_as_pdf</mat-icon>
+                                    </div>
+                                    <div class="file-image">
+                                        <img src="../../../../assets/images/technology (1).jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class="file-name" fxLayout="row">
+                                    <div class="h-20">
+                                        <mat-icon class="mr-12 font-size-20">picture_as_pdf</mat-icon>
+                                    </div>
+                                    <p>File Name</p>
+                                </div>
+                            </div>
+                            <div tabindex="0" class="single-file border-1px-solid border-accent-300"
+                                (click)="fileSelect($event, 2)" [ngClass]="{'file-active':selectedIndex === 2}">
+                                <div class="border-bottom-1px-solid border-accent-300">
+                                    <div class="file-icon">
+                                        <mat-icon>picture_as_pdf</mat-icon>
+                                    </div>
+                                </div>
+                                <div class="file-name" fxLayout="row">
+                                    <div class="h-20">
+                                        <mat-icon class="mr-12 font-size-20">picture_as_pdf</mat-icon>
+                                    </div>
+                                    <p>File Name</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="folders mb-32 border-bottom-2px-dashed pb-32 border-accent-300">
+                        <p class="muli-semibold text-color mb-16">Folders</p>
+                        <div fxLayout="row wrap" fxLayoutAlign="start start" class="file-list">
+                            <div tabindex="0" class="folder border-1px-solid border-accent-300 p-16" fxLayout="row"
+                                fxLayoutAlign="start center" (click)="fileSelect($event, 3)" [ngClass]="{'file-active':selectedIndex === 3}">
+                                <div class="mr-16 h-28">
+                                    <mat-icon class="text-color font-size-28">folder</mat-icon>
+                                </div>
+                                <div class="folder-name">
+                                    <p>Angular Material</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="files mb-32">
+                        <p class="muli-semibold text-color mb-16">Files</p>
+                        <div fxLayout="row wrap" fxLayoutAlign="start start" class="file-list">
+                            <div tabindex="0" class="single-file border-1px-solid border-accent-300"
+                                (click)="fileSelect($event, 4)" [ngClass]="{'file-active':selectedIndex === 4}">
+                                <div class="border-bottom-1px-solid border-accent-300">
+                                    <div *ngIf="false" class="file-icon">
+                                        <mat-icon>picture_as_pdf</mat-icon>
+                                    </div>
+                                    <div class="file-image">
+                                        <img src="../../../../assets/images/technology (1).jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class="file-name" fxLayout="row">
+                                    <div class="h-20">
+                                        <mat-icon class="mr-12 font-size-20">picture_as_pdf</mat-icon>
+                                    </div>
+                                    <p>File Name</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </mat-drawer-container>
+        </div>
+    </div>
+</div>

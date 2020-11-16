@@ -1,0 +1,259 @@
+<mat-sidenav-container class="example-container">
+    <mat-sidenav #sidenav mode="over" position="end" [(opened)]="opened">
+        Sidenav content
+    </mat-sidenav>
+
+    <mat-sidenav-content>
+        <div class="page-title mb-32">
+            <h1 class="font-size-20 line-height-20 font-weight-400 mb-4">Mailbox</h1>
+            <div class="breadcrumb">
+                <ul>
+                    <li><a class="secondary-text" href="">Home</a></li>
+                    <li><a class="active" href="">Mailbox</a></li>
+                </ul>
+            </div>
+        </div>
+        <button mat-button (click)="sidenav.toggle()">Toggle Sidenav</button>
+        <div fxLayout.gt-sm="row" fxLayout="column" fxLayoutGap="32px" class="mailbox-container">
+            <div class="mail-compose bg-accent-A100" fxFlex.gt-sm="15%" fxFlex fxHide.md>
+                <div class="card">
+                    <button mat-flat-button color="primary" class="w-100-p">Compose</button>
+                </div>
+                <div class="inbox-list">
+                    <ul>
+                        <li class="active">
+                            <div fxLayout="row" fxLayoutAlign="start center">
+                                <div class="mr-12 h-24">
+                                    <mat-icon>inbox</mat-icon>
+                                </div>
+                                <div>
+                                    <p class="muli-semibold font-size-14 line-height-14">Inbox</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div fxLayout="row" fxLayoutAlign="start center">
+                                <div class="mr-12 h-24">
+                                    <mat-icon>star</mat-icon>
+                                </div>
+                                <div>
+                                    <p class="muli-semibold font-size-14 line-height-14">Starred</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div fxLayout="row" fxLayoutAlign="start center">
+                                <div class="mr-12 h-24">
+                                    <mat-icon>drafts</mat-icon>
+                                </div>
+                                <div>
+                                    <p class="muli-semibold font-size-14 line-height-14">Draft</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div fxLayout="row" fxLayoutAlign="start center">
+                                <div class="mr-12 h-24">
+                                    <mat-icon>send</mat-icon>
+                                </div>
+                                <div>
+                                    <p class="muli-semibold font-size-14 line-height-14">Send Mail</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div fxLayout="row" fxLayoutAlign="start center">
+                                <div class="mr-12 h-24">
+                                    <mat-icon>delete_outline</mat-icon>
+                                </div>
+                                <div>
+                                    <p class="muli-semibold font-size-14 line-height-14">Trash</p>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="mail-list bg-accent-300" fxFlex.gt-sm="30%" fxFlex.md="50%" fxFlex>
+                <div fxLayout="row" fxLayoutGap.md="16px">
+                    <div fxHide.gt-md fxHide.xs>
+                        <button mat-icon-button color="primary"
+                            aria-label="Example icon button with a vertical three dot icon">
+                            <mat-icon>menu</mat-icon>
+                        </button>
+                    </div>
+                    <div class="email-search mb-24 w-100-p">
+                        <input matInput type="text" matInput placeholder="Ex. Name">
+                    </div>
+                </div>
+                <div class="email-list">
+                    <ul>
+                        <li>
+                            <div class="single-mail cursor-pointer card bg-accent-A100" fxLayout="row"
+                                fxLayoutGap="24px" fxLayoutAlign="start start">
+                                <div fxLayout="row">
+                                    <div class="user-image mr-16">
+                                        <img src="../../../../assets/images/profile.jpg" alt="">
+                                    </div>
+                                    <div class="mail-description">
+                                        <div class="mb-8">
+                                            <p class="font-size-16 line-height-16 mb-4 muli-semibold text-color">
+                                                User Name</p>
+                                            <p class="font-size-12 line-height-12 hint-text">Designation</p>
+                                        </div>
+                                        <p class="font-size-14 line-height-14 mb-16 text-color">Lorem ipsum dolor
+                                            sit, amet consectetur
+                                            adipisicing
+                                            elit. Architecto, saepe.</p>
+
+                                        <p class="font-size-12 hint-text">Attachments (4)</p>
+                                    </div>
+                                </div>
+                                <div class="email-time">
+                                    <p class="hint-text font-size-10 line-height-10">24 March 2020</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="single-mail cursor-pointer card bg-accent-A100" fxLayout="row"
+                                fxLayoutGap="24px" fxLayoutAlign="start start">
+                                <div fxLayout="row">
+                                    <div class="user-image mr-16">
+                                        <img src="../../../../assets/images/profile.jpg" alt="">
+                                    </div>
+                                    <div class="mail-description">
+                                        <div class="mb-8">
+                                            <p class="font-size-16 line-height-16 mb-4 muli-semibold text-color">
+                                                User Name</p>
+                                            <p class="font-size-12 line-height-12 hint-text">Designation</p>
+                                        </div>
+                                        <div>
+                                            <p class="font-size-14">Lorem ipsum dolor sit, amet consectetur
+                                                adipisicing
+                                                elit. Architecto, saepe.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="email-time">
+                                    <p class="hint-text font-size-10 line-height-10">24 March 2020</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="single-mail cursor-pointer card bg-accent-A100" fxLayout="row"
+                                fxLayoutGap="24px" fxLayoutAlign="start start">
+                                <div fxLayout="row">
+                                    <div class="user-image mr-16">
+                                        <img src="../../../../assets/images/profile.jpg" alt="">
+                                    </div>
+                                    <div class="mail-description">
+                                        <div class="mb-8">
+                                            <p class="font-size-16 line-height-16 mb-4 muli-semibold text-color">
+                                                User Name</p>
+                                            <p class="font-size-12 line-height-12 hint-text">Designation</p>
+                                        </div>
+                                        <div>
+                                            <p class="font-size-14">Lorem ipsum dolor sit, amet consectetur
+                                                adipisicing
+                                                elit. Architecto, saepe.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="email-time">
+                                    <p class="hint-text font-size-10 line-height-10">24 March 2020</p>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="mail-details bg-accent-A100" fxFlex.gt-sm="55%" fxFlex.md="50%" fxFlex>
+                <div fxLayout="row" fxLayoutAlign="space-between center" fxLayoutGap="32px"
+                    class="border-bottom-1px-solid border-bottom-accent-300 card">
+                    <div fxLayout="row" fxLayoutGap="16px" fxLayoutAlign="center center">
+                        <div>
+                            <span class="hint-text font-size-14">1/32</span>
+                        </div>
+                        <div>
+                            <button mat-icon-button aria-label="Example icon button with a vertical three dot icon">
+                                <mat-icon>keyboard_arrow_left</mat-icon>
+                            </button>
+                            <button mat-icon-button aria-label="Example icon button with a vertical three dot icon">
+                                <mat-icon>keyboard_arrow_right</mat-icon>
+                            </button>
+                        </div>
+                    </div>
+                    <div>
+                        <button mat-icon-button [matMenuTriggerFor]="appMenu"
+                            aria-label="Example icon button with a vertical three dot icon">
+                            <mat-icon>more_vert</mat-icon>
+                        </button>
+                        <mat-menu #appMenu="matMenu">
+                            <button mat-menu-item>
+                                <mat-icon>favorite_border</mat-icon> Favorite
+                            </button>
+                            <button mat-menu-item>
+                                <mat-icon>reply</mat-icon> Reply
+                            </button>
+                            <button mat-menu-item>
+                                <mat-icon>reply_all</mat-icon> Reply All
+                            </button>
+                            <button mat-menu-item>
+                                <mat-icon>forward</mat-icon> Forward
+                            </button>
+                            <button mat-menu-item>
+                                <mat-icon>folder_open</mat-icon> Folder
+                            </button>
+                            <button mat-menu-item>
+                                <mat-icon>delete_outline</mat-icon> Trash
+                            </button>
+                            <button mat-menu-item>
+                                <mat-icon>delete</mat-icon> Delete All Email
+                            </button>
+                        </mat-menu>
+                    </div>
+                </div>
+                <div class="card pt-0">
+                    <div fxLayout="row" fxLayoutAlign="space-between center">
+                        <div fxLayout="row" class="mb-40 mt-32">
+                            <div class="user-image mr-16">
+                                <img src="../../../../assets/images/profile.jpg" alt="">
+                            </div>
+                            <div class="mail-description">
+                                <div class="mb-8">
+                                    <p class="font-size-16 line-height-16 mb-4 muli-semibold text-color">User Name
+                                    </p>
+                                    <p class="font-size-12 line-height-12 hint-text">Designation</p>
+                                </div>
+                            </div>
+                        </div>
+                        <span class="font-size-12 hint-text">24 March 2020</span>
+                    </div>
+                    <div>
+                        <p class="text-color mb-32"> Hi Tom!</p>
+                        <p class="text-color mb-32">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo corporis natus quos
+                            officiis velit expedita neque impedit architecto quaerat. Alias.
+                        </p>
+                        <p class="text-color mb-32">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit
+                            repellendus est dolore magni aperiam facilis? Dolore, quas debitis commodi dignissimos
+                            reiciendis laborum reprehenderit facilis asperiores.</p>
+
+                        <p
+                            class="muli-semibold font-size-20 line-height-20 text-color mb-32 pb-16 border-bottom-1px-solid border-bottom-accent-300">
+                            Attachments</p>
+                        <div class="attachment" fxLayout="row" fxLayoutAlign="space-between center">
+                            <div fxLayout="column">
+                                <a href="">fullpagecode.png</a>
+                                <a href="">programmingBook.pdf</a>
+                            </div>
+                            <div>
+                                <button mat-stroked-button color="primary">Download All</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </mat-sidenav-content>
+</mat-sidenav-container>

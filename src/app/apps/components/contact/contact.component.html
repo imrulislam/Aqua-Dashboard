@@ -1,0 +1,69 @@
+<div class="contacts">
+    <div fxLayout="row" fxLayoutAlign="space-between center" class="mb-32">
+        <div class="page-title">
+            <h1 class="font-size-20 line-height-20 font-weight-400 mb-4">Contacts</h1>
+            <div class="breadcrumb">
+                <ul>
+                    <li><a class="secondary-text" href="">Home</a></li>
+                    <li><a class="active" href="">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+        <div>
+            <button mat-raised-button color="primary">Add Contact</button>
+        </div>
+    </div>
+    <div class="card bg-accent-A100">
+        <div class="contact-search mb-32" ngClass.gt-sm="w-40-p" ngClass.sm="w-100-p" ngClass.xs="w-100-p">
+            <input matInput (keyup)="applyFilter($event)" type="text" matInput placeholder="Ex. Name">
+        </div>
+        <div class="contact-table">
+            <mat-table [dataSource]="dataSource">
+                <!-- Name Column -->
+                <ng-container matColumnDef="assigned">
+                    <mat-header-cell *matHeaderCellDef> Assigned </mat-header-cell>
+                    <mat-cell *matCellDef="let element">
+                        <div fxLayout="row">
+                            <div class="mr-24">
+                                <ngx-avatar name="{{element.assigned}}"></ngx-avatar>
+                            </div>
+                            <div>
+                                <p class="text-color">{{element.assigned}}</p>
+                                <span class="hint-text">{{element.designation}}</span>
+                            </div>
+                        </div>
+                    </mat-cell>
+                </ng-container>
+
+                <!-- Weight Column -->
+                <ng-container matColumnDef="project">
+                    <mat-header-cell *matHeaderCellDef> project </mat-header-cell>
+                    <mat-cell *matCellDef="let element"> <span class="text-color">{{element.project}}</span>
+                    </mat-cell>
+                </ng-container>
+
+                <!-- Symbol Column -->
+                <ng-container matColumnDef="priority">
+                    <mat-header-cell *matHeaderCellDef> Priority </mat-header-cell>
+                    <mat-cell *matCellDef="let element">
+                        <div>
+                            <span class="label label-round"
+                                [ngClass]="{'bg-primary-500':element.priority === 'High', 'bg-accent-500':element.priority === 'Medium', 'bg-warn-500':element.priority === 'Low'}">{{element.priority}}</span>
+                        </div>
+                    </mat-cell>
+                </ng-container>
+
+                <!-- Symbol Column -->
+                <ng-container matColumnDef="budget">
+                    <mat-header-cell *matHeaderCellDef> Budget </mat-header-cell>
+                    <mat-cell *matCellDef="let element"> <span class="text-color">$ {{element.budget}}</span>
+                    </mat-cell>
+                </ng-container>
+
+                <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+                <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+            </mat-table>
+            <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,636 @@
+<div class="modern-dashboard">
+    <div class="page-title mb-32">
+        <h1 class="font-size-20 line-height-20 font-weight-400 mb-4">Modern Dashboard</h1>
+        <div class="breadcrumb">
+            <ul>
+                <li><a class="secondary-text" href="">Home</a></li>
+                <li><a class="active" href="">Dashboard 3</a></li>
+            </ul>
+        </div>
+    </div>
+
+
+    <div fxLayout.gt-sm="row" fxLayout="column" fxLayoutGap="2px" class="mb-32">
+        <div fxFlex.gt-sm="25%" fxFlex>
+            <div class="card bg-accent-A100">
+                <div class="mb-16">
+                    <p class="text-color font-size-24 line-height-28 muli-light">86%</p>
+                    <p class="hint-text line-height-16">Total Product</p>
+                </div>
+                <mat-progress-bar color="primary" mode="determinate" value="40"></mat-progress-bar>
+            </div>
+        </div>
+        <div fxFlex.gt-sm="25%" fxFlex>
+            <div class="card bg-accent-A100">
+                <div class="mb-16">
+                    <p class="text-color font-size-24 line-height-28 muli-light">40%</p>
+                    <p class="hint-text line-height-16">Pending Product</p>
+                </div>
+                <mat-progress-bar color="accent" mode="determinate" value="40"></mat-progress-bar>
+            </div>
+        </div>
+        <div fxFlex.gt-sm="25%" fxFlex>
+            <div class="card bg-accent-A100">
+                <div class="mb-16">
+                    <p class="text-color font-size-24 line-height-28 muli-light">56%</p>
+                    <p class="hint-text line-height-16">Product A</p>
+                </div>
+                <mat-progress-bar color="warn" mode="determinate" value="40"></mat-progress-bar>
+            </div>
+        </div>
+        <div fxFlex.gt-sm="25%" fxFlex>
+            <div class="card bg-accent-A100">
+                <div class="mb-16">
+                    <p class="text-color font-size-24 line-height-28 muli-light">37%</p>
+                    <p class="hint-text line-height-16">Product B</p>
+                </div>
+                <mat-progress-bar color="primary" mode="determinate" value="40"></mat-progress-bar>
+            </div>
+        </div>
+    </div>
+
+    <div fxLayout.gt-sm="row" fxLayout="column" fxLayoutGap="32px" class="mb-32">
+        <div fxFlex.gt-sm="50%" fxFlex>
+            <div class="card bg-accent-A100">
+                <div fxLayout="row" fxLayoutAlign="space-between center" class="mb-32">
+                    <p class="text-color font-size-20 line-height-20">Newsletter Campaign
+                    </p>
+                    <div class="income-legend">
+                        <ul>
+                            <li>
+                                <div fxLayout="row" fxLayoutAlign="center center">
+                                    <span class="material-icons text-success">
+                                        fiber_manual_record
+                                    </span>
+                                    <p class="font-size-14 hint-text">Open Rate</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div fxLayout="row" fxLayoutAlign="center center">
+                                    <span class="material-icons text-info">
+                                        fiber_manual_record
+                                    </span>
+                                    <p class="font-size-14 hint-text">Payment</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="chart-wrapper mb-40">
+                    <canvas baseChart [datasets]="lineChartData" [labels]="lineChartLabels" [options]="lineChartOptions"
+                        [colors]="lineChartColors" [chartType]="lineChartType" [plugins]="lineChartPlugins">
+                    </canvas>
+                </div>
+                <div fxLayout.gt-sm="row" fxLayout="column" fxLayoutGap="32px">
+                    <div fxFlex.gt-sm="33%" fxFlex class="text-center">
+                        <p class="text-color muli-light font-size-34 line-height-34 mb-8">5098</p>
+                        <p class="text-color muli-light font-size-12 line-height-12">Total Sent</p>
+                    </div>
+                    <div fxFlex.gt-sm="33%" fxFlex class="text-center">
+                        <p class="text-color muli-light font-size-34 line-height-34 mb-8">4156</p>
+                        <p class="text-color muli-light font-size-12 line-height-12">Mail Open Rate</p>
+                    </div>
+                    <div fxFlex.gt-sm="33%" fxFlex class="text-center">
+                        <p class="text-color muli-light font-size-34 line-height-34 mb-8">1369</p>
+                        <p class="text-color muli-light font-size-12 line-height-12">Click Rate</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div fxFlex.gt-sm="50%" fxFlex>
+            <div class="card bg-accent-A100">
+                <div fxLayout="row" fxLayoutAlign="space-between center" class="mb-32">
+                    <p class="text-color font-size-20 line-height-20">Income of the year</p>
+                    <div class="income-legend">
+                        <ul>
+                            <li>
+                                <div fxLayout="row" fxLayoutAlign="center center">
+                                    <span class="material-icons text-success">
+                                        fiber_manual_record
+                                    </span>
+                                    <p class="font-size-14 hint-text">Growth</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div fxLayout="row" fxLayoutAlign="center center">
+                                    <span class="material-icons text-info">
+                                        fiber_manual_record
+                                    </span>
+                                    <p class="font-size-14 hint-text">Net</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="bar-chart-wrapper">
+                    <canvas baseChart [datasets]="barChartData" [colors]="barChartColors" [labels]="barChartLabels"
+                        [options]="barChartOptions" [plugins]="barChartPlugins" [legend]="barChartLegend"
+                        [chartType]="barChartType">
+                    </canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div fxLayout.gt-sm="row" fxLayout="column" fxLayoutGap="32px" class="mb-32">
+        <div fxFlex.gt-sm="50%" fxFlex>
+            <div class="card bg-accent-A100">
+                <div class="mb-32">
+                    <p class="text-color font-size-20 line-height-20">Activity Log</p>
+                </div>
+                <div class="activity-log-content">
+                    <div class="log-date mb-32" fxLayout="row" fxLayoutAlign="space-between center">
+                        <p>March 2020</p>
+                        <span class="label label-round bg-primary-500">20</span>
+                    </div>
+                    <div class="single-activity-log mb-32" fxLayout="row" fxLayoutGap="24px"
+                        fxLayoutAlign="start start">
+                        <div fxFlex="80" fxLayout="row">
+                            <div class="user-image mr-16">
+                                <img src="../../../../assets/images/profile.jpg" alt="">
+                            </div>
+                            <div class="log-description">
+                                <div class="mb-8">
+                                    <p class="font-size-20 line-height-20 mb-4">User Name</p>
+                                    <p class="font-size-14 hint-text">Designation</p>
+                                </div>
+                                <div class="comment">
+                                    <p class="font-size-14 mb-4">Commented on <a href="" class="text-success">Test
+                                            Project</a></p>
+                                    <p class="font-size-14">Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                                        Architecto, saepe.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div fxFlex="20" class="text-right">
+                            <p class="text-color font-size-12 line-height-12">24 March 2020</p>
+                        </div>
+                    </div>
+                    <div class="single-activity-log mb-32" fxLayout="row" fxLayoutGap="24px"
+                        fxLayoutAlign="start start">
+                        <div fxFlex="80" fxLayout="row">
+                            <div class="user-image mr-16">
+                                <img src="../../../../assets/images/profile.jpg" alt="">
+                            </div>
+                            <div class="log-description">
+                                <div class="mb-8">
+                                    <p class="font-size-20 line-height-20 mb-4">User Name</p>
+                                    <p class="font-size-14 hint-text">Designation</p>
+                                </div>
+                                <div class="comment">
+                                    <p class="font-size-14 mb-4">Commented on <a href="" class="text-success">Test
+                                            Project</a></p>
+                                    <p class="font-size-14">Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                                        Architecto, saepe.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div fxFlex="20" class="text-right">
+                            <p class="text-color line-height-12 font-size-12">24 March 2020</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div fxFlex.gt-sm="50%" fxFlex>
+            <div class="card bg-accent-A100">
+                <div class="mb-32">
+                    <p class="text-color font-size-20 line-height-20">Feeds</p>
+                </div>
+                <div class="feed mb-8" fxLayout="row" fxLayoutAlign="space-between center">
+                    <div fxLayout="row" fxLayoutAlign="center center">
+                        <div class="mr-12 feed-icon">
+                            <mat-icon class="material-icons ">
+                                notifications_none
+                            </mat-icon>
+                        </div>
+                        <div>
+                            <p class="text-color">You have 4 pending tasks</p>
+                        </div>
+                    </div>
+                    <div>
+                        <span class="font-size-12 hint-text">21 May</span>
+                    </div>
+                </div>
+                <div class="feed mb-8" fxLayout="row" fxLayoutAlign="space-between center">
+                    <div fxLayout="row" fxLayoutAlign="center center">
+                        <div class="mr-12 feed-icon">
+                            <mat-icon class="material-icons ">
+                                dns
+                            </mat-icon>
+                        </div>
+                        <div>
+                            <p class="text-color"> Server #1 overloaded.</p>
+                        </div>
+                    </div>
+                    <div>
+                        <span class="font-size-12 hint-text">21 May</span>
+                    </div>
+                </div>
+                <div class="feed mb-8" fxLayout="row" fxLayoutAlign="space-between center">
+                    <div fxLayout="row" fxLayoutAlign="center center">
+                        <div class="mr-12 feed-icon">
+                            <mat-icon class="material-icons ">
+                                add_shopping_cart
+                            </mat-icon>
+                        </div>
+                        <div>
+                            <p class="text-color">New order received.</p>
+                        </div>
+                    </div>
+                    <div>
+                        <span class="font-size-12 hint-text">21 May</span>
+                    </div>
+                </div>
+                <div class="feed mb-8" fxLayout="row" fxLayoutAlign="space-between center">
+                    <div fxLayout="row" fxLayoutAlign="center center">
+                        <div class="mr-12 feed-icon">
+                            <mat-icon class="material-icons ">
+                                person_outline
+                            </mat-icon>
+                        </div>
+                        <div>
+                            <p class="text-color">New user registered.</p>
+                        </div>
+                    </div>
+                    <div>
+                        <span class="font-size-12 hint-text">21 May</span>
+                    </div>
+                </div>
+                <div class="feed mb-8" fxLayout="row" fxLayoutAlign="space-between center">
+                    <div fxLayout="row" fxLayoutAlign="center center">
+                        <div class="mr-12 feed-icon">
+                            <mat-icon class="material-icons ">
+                                settings
+                            </mat-icon>
+                        </div>
+                        <div>
+                            <p class="text-color">New Version just arrived.</p>
+                        </div>
+                    </div>
+                    <div>
+                        <span class="font-size-12 hint-text">21 May</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div fxLayout.gt-sm="row" fxLayout="column" fxLayoutGap="32px" class="mb-32">
+        <div fxFlex.gt-sm="60%" fxFlex>
+            <div class="bg-accent-A100">
+                <div fxLayout.gt-sm="row" fxLayout="column">
+                    <div fxFlex.gt-sm="30%" fxFlex class="review-border">
+                        <div class="p-24 pb-54">
+                            <div class="mb-32">
+                                <p class="text-color font-size-20 line-height-20">Reviews</p>
+                            </div>
+                            <div class="mb-16">
+                                <p class="font-size-50 line-height-50 text-color">31560</p>
+                                <p class="hint-text font-size-16">April the product got 234 reviews</p>
+                            </div>
+                            <div class="review-user-list mb-32">
+                                <ul>
+                                    <li>
+                                        <div class="review-user">
+                                            <img src="../../../../assets/images/profile.jpg" alt="Review Images">
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="review-user">
+                                            <img src="../../../../assets/images/profile.jpg" alt="Review Images">
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="review-user">
+                                            <img src="../../../../assets/images/profile.jpg" alt="Review Images">
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="review-user">
+                                            <img src="../../../../assets/images/profile.jpg" alt="Review Images">
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="review-user">
+                                            <img src="../../../../assets/images/profile.jpg" alt="Review Images">
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <button mat-flat-button color="primary">Read reviews</button>
+                        </div>
+                    </div>
+                    <div fxFlex.gt-sm="70%" fxFlex fxLayout="column" fxLayoutAlign="center start">
+                        <div class="p-32 w-100-p">
+                            <div class="mb-32">
+                                <div fxLayout="row" fxLayoutAlign="start center" class="mb-16">
+                                    <div class="mr-16 round success-bg">
+                                        <span class="material-icons">sentiment_very_satisfied</span>
+                                    </div>
+                                    <div>
+                                        <p class="text-color font-size-24 muli-light">Positive Reviews</p>
+                                        <p class="hint-text">25547 Reviews</p>
+                                    </div>
+                                </div>
+                                <mat-progress-bar mode="determinate" color="primary" value="40"></mat-progress-bar>
+                            </div>
+                            <div class="mb-32">
+                                <div fxLayout="row" fxLayoutAlign="start center" class="mb-16">
+                                    <div class="mr-16 round danger-bg">
+                                        <span class="material-icons">sentiment_very_dissatisfied</span>
+                                    </div>
+                                    <div>
+                                        <p class="text-color font-size-24 muli-light">Negative Reviews</p>
+                                        <p class="hint-text">5478 Reviews</p>
+                                    </div>
+                                </div>
+                                <mat-progress-bar mode="determinate" color="warn" value="40"></mat-progress-bar>
+                            </div>
+                            <div>
+                                <div fxLayout="row" fxLayoutAlign="start center" class="mb-16">
+                                    <div class="mr-16 round info-bg">
+                                        <span class="material-icons">mood</span>
+                                    </div>
+                                    <div>
+                                        <p class="text-color font-size-24 muli-light">Neutral Reviews</p>
+                                        <p class="hint-text">457 Reviews</p>
+                                    </div>
+                                </div>
+                                <mat-progress-bar mode="determinate" color="accent" value="40"></mat-progress-bar>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div fxFlex.gt-sm="40%" fxFlex>
+            <div class="card bg-accent-A100">
+                <div class="mb-32">
+                    <p class="text-color font-size-20 line-height-20">Notification</p>
+                </div>
+                <div class="notification-list">
+                    <ul>
+                        <li>
+                            <div class="single-notification cursor-pointer">
+                                <div fxLayout="row" fxLayoutAlign="start center">
+                                    <div class="mr-16 round success-bg">
+                                        <span class="material-icons">link</span>
+                                    </div>
+                                    <div>
+                                        <p class="text-color font-size-18 line-height-18 mb-4 muli-light">Luanch Admin
+                                        </p>
+                                        <p class="hint-text muli-light font-size-14 line-height-18 line-height-14">Just
+                                            see the my new admin!</p>
+                                        <p class="hint-text muli-light font-size-12">9:02 AM</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="single-notification cursor-pointer">
+                                <div fxLayout="row" fxLayoutAlign="start center">
+                                    <div class="mr-16 round info-bg">
+                                        <span class="material-icons">calendar_today</span>
+                                    </div>
+                                    <div>
+                                        <p class="text-color font-size-18 line-height-18 muli-light">Event today</p>
+                                        <p class="hint-text muli-light font-size-14 line-height-18 line-height-14">Just
+                                            see the my new admin!</p>
+                                        <p class="hint-text muli-light font-size-12">9:02 AM</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="single-notification cursor-pointer">
+                                <div fxLayout="row" fxLayoutAlign="start center">
+                                    <div class="mr-16 round accent-bg">
+                                        <span class="material-icons">settings</span>
+                                    </div>
+                                    <div>
+                                        <p class="text-color font-size-18 line-height-18 muli-light">Settings</p>
+                                        <p class="hint-text muli-light font-size-14 line-height-18 line-height-14">Just
+                                            see the my new admin!</p>
+                                        <p class="hint-text muli-light font-size-12">9:02 AM</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="single-notification cursor-pointer">
+                                <div fxLayout="row" fxLayoutAlign="start center">
+                                    <div class="mr-16 round danger-bg">
+                                        <span class="material-icons">person</span>
+                                    </div>
+                                    <div>
+                                        <p class="text-color font-size-18 line-height-18 muli-light">John Deo</p>
+                                        <p class="hint-text muli-light font-size-14 line-height-18 line-height-14">Just
+                                            see the my new admin!</p>
+                                        <p class="hint-text muli-light font-size-12">9:02 AM</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div fxLayout.gt-sm="row" fxLayout="column" fxLayoutGap="32px" class="mb-32">
+        <div fxFlex.gt-sm="60%" fxFlex>
+            <div class="card bg-accent-A100">
+                <div class="mb-32">
+                    <p class="text-color font-size-20 line-height-20">Recent Chats</p>
+                    <p class="hint-text font-size-14">What members preformance / weekly status</p>
+                </div>
+                <div class="chat-container">
+                    <div class="chat-box">
+                        <ul class="chat-list">
+                            <li>
+                                <div class="chat-img">
+                                    <img src="../../../../assets/images/profile.jpg" alt="user">
+                                </div>
+                                <div class="chat-content">
+                                    <p class="hint-text font-size-18 line-height-18 mb-8 muli-light">James Anderson</p>
+                                    <div class="bg-primary-100 chat-box">
+                                        <p class="text-color muli-light">Lorem, ipsum dolor sit amet consectetur
+                                            adipisicing elit. Delectus, rerum.</p>
+                                    </div>
+                                </div>
+                                <div class="chat-time">
+                                    <span>10:58 am</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="chat-img">
+                                    <img src="../../../../assets/images/profile.jpg" alt="user">
+                                </div>
+                                <div class="chat-content">
+                                    <p class="hint-text font-size-18 line-height-18 mb-8 muli-light">Bianca Doe</p>
+                                    <div class="bg-primary-100 chat-box">
+                                        <p class="text-color muli-light">It’s Great opportunity to work.</p>
+                                    </div>
+                                </div>
+                                <div class="chat-time">
+                                    <span>10:58 am</span>
+                                </div>
+                            </li>
+                            <li class="odd">
+                                <div class="chat-content">
+                                    <p class="hint-text font-size-18 line-height-18 mb-8 muli-light">Bianca Doe</p>
+                                    <div class="bg-accent-300 chat-box">
+                                        <p class="text-color muli-light">It’s Great opportunity to work.</p>
+                                    </div>
+                                </div>
+                                <div class="chat-time">
+                                    <span class="muli-light">10:58 am</span>
+                                </div>
+                            </li>
+                            <li class="odd">
+                                <div class="chat-content">
+                                    <p class="hint-text font-size-18 line-height-18 mb-8 muli-light">Bianca Doe</p>
+                                    <div class="bg-accent-300 chat-box">
+                                        <p class="text-color muli-light">It’s Great opportunity to work.</p>
+                                    </div>
+                                </div>
+                                <div class="chat-time">
+                                    <span>10:58 am</span>
+                                </div>
+                            </li>
+                            <li class="odd">
+                                <div class="chat-content">
+                                    <p class="hint-text font-size-18 line-height-18 mb-8 muli-light">Bianca Doe</p>
+                                    <div class="bg-accent-300 chat-box">
+                                        <p class="text-color muli-light">It’s Great opportunity to work.</p>
+                                    </div>
+                                </div>
+                                <div class="chat-time">
+                                    <span>10:58 am</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card bg-accent-A100 chat-form">
+                <div fxLayout="row" fxLayoutAlign="space-between center" fxLayoutGap="32px">
+                    <div fxFlex="80%">
+                        <mat-form-field class="w-100-p" floatLabel="never" appearance="outline">
+                            <input matInput placeholder="Type your message here">
+                        </mat-form-field>
+                    </div>
+                    <div fxFlex="20%" class="text-right">
+                        <button class="send-btn" mat-fab color="primary" aria-label="Send">
+                            <mat-icon>send</mat-icon>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div fxFlex.gt-sm="40%" fxFlex>
+            <div class="card bg-accent-A100 mb-32">
+                <div class="mb-32">
+                    <p class="text-color font-size-20 line-height-20">Report</p>
+                </div>
+                <div class="border-radius-6px report-card bg-primary-500 mb-24">
+                    <div fxLayout="row" fxLayoutAlign="start center">
+                        <div class="mr-16">
+                            <span class="material-icons font-size-50">show_chart</span>
+                        </div>
+                        <div>
+                            <p class="font-size-24 muli-light">Weekly activity</p>
+                            <p>52%</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="border-radius-6px report-card bg-accent-500 mb-24">
+                    <div fxLayout="row" fxLayoutAlign="start center">
+                        <div class="mr-16">
+                            <span class="material-icons font-size-50">access_time</span>
+                        </div>
+                        <div>
+                            <p class="font-size-24 muli-light">Worked this week</p>
+                            <p>11:56:33</p>
+                        </div>
+                    </div>
+                </div>
+                <button mat-stroked-button color="primary" class="text-uppercase w-100-p export-pdf"><span
+                        class="material-icons mr-12 font-size-16">picture_as_pdf</span>Export as pdf</button>
+
+            </div>
+            <div class="card bg-accent-A100">
+                <div class="mb-32">
+                    <p class="text-color font-size-20 line-height-20">Screenshots</p>
+                </div>
+                <div class="screenshot-list mb-24">
+                    <ul>
+                        <li>
+                            <div fxLayout="row" fxLayoutAlign="center center">
+                                <div fxFlex="80%" fxLayout="row" fxLayoutAlign="start center">
+                                    <div class="mr-16 h-20">
+                                        <span class="material-icons font-size-20">insert_photo</span>
+                                    </div>
+                                    <div>
+                                        <p class="font-size-14 line-height-18 muli-light truncate w-280">shot_1_attach_1.png</p>
+                                    </div>
+                                </div>
+                                <div fxFlex="20%" class="text-right">
+                                    <button mat-flat-button color="primary">View</button>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div fxLayout="row" fxLayoutAlign="center center">
+                                <div fxFlex="80%" fxLayout="row" fxLayoutAlign="start center">
+                                    <div class="mr-16 h-20">
+                                        <span class="material-icons font-size-20">insert_photo</span>
+                                    </div>
+                                    <div>
+                                        <p class="font-size-14 line-height-18 muli-light truncate w-280">shot_1_attach_1.png</p>
+                                    </div>
+                                </div>
+                                <div fxFlex="20%" class="text-right">
+                                    <button mat-flat-button color="primary">View</button>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div fxLayout="row" fxLayoutAlign="center center">
+                                <div fxFlex="80%" fxLayout="row" fxLayoutAlign="start center">
+                                    <div class="mr-16 h-20">
+                                        <span class="material-icons font-size-20">play_circle_outline</span>
+                                    </div>
+                                    <div>
+                                        <p class="font-size-14 line-height-18 muli-light truncate w-280">shot_1_attach_1.mp4</p>
+                                    </div>
+                                </div>
+                                <div fxFlex="20%" class="text-right">
+                                    <button mat-flat-button color="primary">Play</button>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div fxLayout="row" fxLayoutAlign="center center">
+                                <div fxFlex="80%" fxLayout="row" fxLayoutAlign="start center">
+                                    <div class="mr-16 h-20">
+                                        <span class="material-icons font-size-20">insert_photo</span>
+                                    </div>
+                                    <div>
+                                        <p class="font-size-14 line-height-18 muli-light truncate w-280">shot_1_attach_1.png</p>
+                                    </div>
+                                </div>
+                                <div fxFlex="20%" class="text-right">
+                                    <button mat-flat-button color="primary">View</button>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <button mat-stroked-button color="primary" class="text-uppercase w-100-p view-all-screenshot">View all</button>
+            </div>
+        </div>
+    </div>
+</div>

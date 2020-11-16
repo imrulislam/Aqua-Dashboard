@@ -1,195 +1,155 @@
-$white-bg: #fff;
-$black-bg: #212121;
-$grey:#757575;
-$primary:#3f51b5;
-$info:#4285F4;
-$success:#00A760;
-$warning:#FFD500;
-$danger:#f44336;
-$dark:#212121;
-$offWhite:#fafafa;
-//Associated color classes
-.white-text {
-  color: $white-bg !important;
-}
-.off-white-bg {
-  background: $offWhite !important;
-}
-.success-text{
-  color: $success !important;
-}
-.danger-text{
-  color: $danger !important;
-}
-.info-text{
-  color: $info !important;
-}
-.warning-text{
-  color: $warning !important;
-}
-
-.black-text {
-  color: $black-bg !important;
-}
-
-.white-bg {
-  background: $white-bg
-}
-
-.black-bg {
-  background: $black-bg
-}
-
-.primary-text {
-  color: $primary !important;
-}
-
 .secondary-text {
-  color: $dark !important;
+    color: rgba(0, 0, 0, 0.54);
 }
 
-.primary-bg {
-  background: $primary !important;
-  color: $white-bg;
+.hint-text,
+.disabled-text {
+    color: #bcc3d3;
 }
 
-.white-bg {
-  background: $white-bg !important;
+.divider {
+    color: rgba(0, 0, 0, 0.12);
 }
 
-.black-bg {
-  background: $black-bg !important;
-  color: $white-bg;
-}
-
-.dark-bg {
-  background: $dark !important;
-  color: $white-bg;
-}
-
-.grey-bg {
-  background: $grey !important;
-  color: $white-bg;
-}
-
-.danger-bg {
-  background: $danger !important;
-  color: $white-bg;
-}
-
-.info-bg {
-  background: $info !important;
-  color: $white-bg;
+.text-success {
+    color: #24d2b5;
 }
 
 .success-bg {
-  background: $success !important;
-  color: $white-bg;
+    background-color: #24d2b5;
 }
 
-.warning-bg {
-  background: $warning !important;
-  color: $white-bg;
+.text-info {
+    color: #20aee3;
 }
-.bg-red-400{
-  background: #EF5350 !important;
+
+.info-bg {
+    background-color: #20aee3;
 }
-.bg-red-500{
-  background: #F44336 !important;
+
+.text-danger {
+    color: #fd5052;
 }
-.bg-red-600{
-  background: #E53935 !important;
+
+.danger-bg {
+    background-color: #fd5052;
 }
-.bg-red-700{
-  background: #D32F2F !important;
+
+.text-accent {
+    color: #6772e5;
 }
-.bg-gray-400{
-  background: #BDBDBD !important;
+
+.accent-bg {
+    background-color: #6772e5;
 }
-.bg-gray-500{
-  background: #9E9E9E !important;
+
+.text-color {
+    color: #455a64;
 }
-.bg-gray-600{
-  background: #757575 !important;
+
+.facebook {
+    background-color: #1877F2;
+    color: #fff;
+
+    i {
+        color: #fff;
+    }
 }
-.bg-gray-700{
-  background: #616161 !important;
+
+.google {
+    background-color: #EA4335;
+    color: #fff;
+
+    i {
+        color: #fff;
+    }
 }
-.bg-green-400{
-  background: #66BB6A !important;
+
+.linkedin {
+    background-color: #0077B5;
+    color: #fff;
+
+    i {
+        color: #fff;
+    }
 }
-.bg-green-500{
-  background: #4CAF50 !important;
+
+
+// Material colors map
+$matColorsMap: ("primary": $primary,
+    "accent": $accent,
+    "warn": $warn);
+
+// Material color hues list
+$matColorHues: 50,
+100,
+200,
+300,
+400,
+500,
+600,
+700,
+800,
+900,
+A100,
+A200,
+A400,
+A700;
+
+// Color classes generator mixin
+@mixin generateColorClasses($colorName, $color, $contrastColor, $hue) {
+
+    .bg-#{$colorName}#{$hue} {
+        background-color: $color !important;
+    }
+
+    .mat-#{$colorName}#{$hue}-bg {
+        background-color: $color !important;
+        color: $contrastColor !important;
+
+        &[disabled] {
+            background-color: rgba($color, .12) !important;
+            color: rgba($contrastColor, .26) !important;
+        }
+    }
+
+    .fg-#{$colorName}#{$hue} {
+        color: $color !important;
+    }
+
+    .border-#{$colorName}#{$hue} {
+        border-color: $color !important;
+    }
+
+    .border-top-#{$colorName}#{$hue} {
+        border-top-color: $color !important;
+    }
+
+    .border-right-#{$colorName}#{$hue} {
+        border-right-color: $color !important;
+    }
+
+    .border-bottom-#{$colorName}#{$hue} {
+        border-bottom-color: $color !important;
+    }
+
+    .border-left-#{$colorName}#{$hue} {
+        border-left-color: $color !important;
+    }
 }
-.bg-green-600{
-  background: #43A047 !important;
-}
-.bg-green-700{
-  background: #388E3C !important;
-}
-.bg-lime-400{
-  background: #D4E157 !important;
-}
-.bg-lime-500{
-  background: #CDDC39 !important;
-}
-.bg-lime-600{
-  background: #C0CA33 !important;
-}
-.bg-lime-700{
-  background: #AFB42B !important;
-}
-.bg-orange-400{
-  background: #FFA726 !important;
-}
-.bg-orange-500{
-  background: #FF9800 !important;
-}
-.bg-orange-600{
-  background: #FB8C00 !important;
-}
-.bg-orange-700{
-  background: #F57C00 !important;
-}
-.bg-cyan-400{
-  background: #26C6DA !important;
-}
-.bg-cyan-500{
-  background: #00BCD4 !important;
-}
-.bg-cyan-600{
-  background: #00ACC1 !important;
-}
-.bg-cyan-700{
-  background: #0097A7 !important;
-}
-.bg-teal-400{
-  background: #26A69A !important;
-}
-.bg-teal-500{
-  background: #009688 !important;
-}
-.bg-teal-600{
-  background: #00897B !important;
-}
-.bg-teal-700{
-  background: #00796B !important;
-}
-.bg-amber-400{
-  background: #FFCA28 !important;
-}
-.bg-amber-500{
-  background: #FFC107 !important;
-}
-.bg-amber-600{
-  background: #FFB300 !important;
-}
-.bg-amber-700{
-  background: #FFA000 !important;
-}
-.bg-red-400, .bg-red-500, .bg-red-600, .bg-red-700, .bg-cyan-700, .bg-teal-500, .bg-teal-600, .bg-teal-700, .bg-green-600, .bg-green-700, .bg-gray-600, .bg-gray-700{
-  color: #fff !important;
-}
-.bg-amber-400, .bg-amber-500, .bg-amber-600, .bg-amber-700, .bg-cyan-400, .bg-cyan-500, .bg-cyan-600, .bg-teal-400, .bg-green-400, .bg-green-500, .bg-lime-400, .bg-lime-500, .bg-lime-600, .bg-lime-700, .bg-orange-400, .bg-orange-500, .bg-orange-600, .bg-orange-700, .bg-gray-400, .bg-gray-500{
-  color: #000 !important;
+
+// Generate the color classes...
+@each $colorName,
+$colorMap in $matColorsMap {
+
+    @each $hue in $matColorHues {
+
+        $color: map-get($colorMap, $hue);
+        $contrastColor: map-get(map-get($colorMap, 'contrast'), $hue);
+
+        @if ($color !=null and $contrastColor !=null) {
+
+            @include generateColorClasses($colorName, $color, $contrastColor, '-#{$hue}');
+        }
+    }
 }
